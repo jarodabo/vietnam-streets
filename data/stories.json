@@ -1,0 +1,26 @@
+[
+  {
+    "id": "story-1",
+    "title": "The Art of Tết Preparation",
+    "category": "heritage",
+    "excerpt": "Three generations of women gather in a rural village to prepare traditional foods for Vietnamese New Year, maintaining customs passed down through centuries of celebration.",
+    "location": "Mekong Delta, Vietnam",
+    "date": "2025-01-15",
+    "imageUrl": "/images/placeholder-tet.jpg",
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "updatedAt": "2025-01-01T00:00:00.000Z",
+    "createdBy": "admin"
+  },
+  {
+    "id": "story-2",
+    "title": "Between Two Worlds",
+    "category": "diaspora",
+    "excerpt": "A Vietnamese-American family navigates cultural identity, preserving ancestral traditions while embracing American life in suburban California.",
+    "location": "San Jose, California",
+    "date": "2024-12-10",
+    "imageUrl": "/images/placeholder-diaspora.jpg",
+    "createdAt": "2024-12-15T00:00:00.000Z",
+    "updatedAt": "2024-12-15T00:00:00.000Z",
+    "createdBy": "admin"
+  }
+]

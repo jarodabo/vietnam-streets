@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographers — Vietnam Streets</title>
+    <meta name="description" content="Meet the Vietnamese photographers documenting culture, heritage, and community life through powerful visual storytelling.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-link">Vietnam Streets</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="stories.html">Stories</a>
+                    <a href="photographers.html" class="active">Photographers</a>
+                    <a href="learn.html">Learn</a>
+                    <a href="store.html">Store</a>
+                    <a href="prints.html">Fine Prints</a>
+                    <a href="events.html">Cultural Events</a>
+                    <a href="diaspora.html">Diaspora Stories</a>
+                    <a href="collaborate.html">Work With Us</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#search" class="nav-link">Search</a>
+                    <a href="#connect" class="nav-link">Connect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Photographers</h1>
+                <p class="page-subtitle">Vietnamese visual storytellers capturing the essence of culture, community, and heritage through contemporary photography.</p>
+            </div>
+        </section>
+
+        <section class="photographers-featured">
+            <div class="container">
+                <div class="featured-photographer observe">
+                    <div class="featured-photographer-image">
+                        <div class="image-placeholder" data-caption="Portrait of Minh Nguyen in his Ho Chi Minh City studio"></div>
+                    </div>
+                    <div class="featured-photographer-content">
+                        <span class="featured-tag">Featured Photographer</span>
+                        <h2 class="featured-photographer-name">Minh Nguyen</h2>
+                        <p class="featured-photographer-location">Ho Chi Minh City, Vietnam</p>
+                        <p class="featured-photographer-bio">Minh captures the intersection of tradition and modernity in urban Vietnam. His work documents the rapid transformation of Saigon while preserving intimate moments of daily life that connect past and present.</p>
+                        <div class="featured-photographer-specialties">
+                            <span class="specialty-tag">Street Photography</span>
+                            <span class="specialty-tag">Urban Culture</span>
+                            <span class="specialty-tag">Documentary</span>
+                        </div>
+                        <a href="#" class="photographer-link">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="photographers-grid-section">
+            <div class="container">
+                <div class="photographers-filter">
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">All Photographers</button>
+                        <button class="filter-btn" data-filter="vietnam">Vietnam</button>
+                        <button class="filter-btn" data-filter="diaspora">Diaspora</button>
+                        <button class="filter-btn" data-filter="emerging">Emerging</button>
+                        <button class="filter-btn" data-filter="established">Established</button>
+                    </div>
+                </div>
+
+                <div class="photographers-grid" id="photographersGrid">
+
+                    <div class="photographer-card observe" data-category="vietnam established">
+                        <div class="photographer-image">
+                            <div class="image-placeholder" data-caption="Portrait of Linh Pham with traditional Vietnamese architecture backdrop"></div>
+                        </div>
+                        <div class="photographer-info">
+                            <h3 class="photographer-name">Linh Pham</h3>
+                            <p class="photographer-location">Hanoi, Vietnam</p>
+                            <p class="photographer-specialty">Heritage & Architecture</p>
+                            <p class="photographer-description">Documents Vietnam's architectural heritage, from ancient temples to French colonial buildings, capturing stories embedded in stone and wood.</p>
+                            <a href="#" class="photographer-portfolio-link">View Work</a>
+                        </div>
+                    </div>
+
+                    <div class="photographer-card observe" data-category="diaspora established">
+                        <div class="photographer-image">
+                            <div class="image-placeholder" data-caption="Portrait of David Tran in his California studio"></div>
+                        </div>
+                        <div class="photographer-info">
+                            <h3 class="photographer-name">David Tran</h3>
+                            <p class="photographer-location">San Francisco, California</p>
+                            <p class="photographer-specialty">Community & Identity</p>
+                            <p class="photographer-description">Second-generation Vietnamese-American photographer exploring themes of cultural identity and belonging within diaspora communities.</p>
+                            <a href="#" class="photographer-portfolio-link">View Work</a>
+                        </div>
+                    </div>
+
+                    <div class="photographer-card observe" data-category="vietnam emerging">
+                        <div class="photographer-image">
+                            <div class="image-placeholder" data-caption="Portrait of young photographer An Le with camera equipment"></div>
+                        </div>
+                        <div class="photographer-info">
+                            <h3 class="photographer-name">An Le</h3>
+                            <p class="photographer-location">Da Nang, Vietnam</p>
+                            <p class="photographer-specialty">Contemporary Culture</p>
+                            <p class="photographer-description">Rising talent capturing Vietnam's youth culture and the evolution of coastal cities through a fresh, contemporary lens.</p>
+                            <a href="#" class="photographer-portfolio-link">View Work</a>
+                        </div>
+                    </div>
+
+                    <div class="photographer-card observe" data-category="diaspora established">
+                        <div class="photographer-image">
+                            <div class="image-placeholder" data-caption="Portrait of Mai Chen in Little Saigon"></div>
+                        </div>
+                        <div class="photographer-info">
+                            <h3 class="photographer-name">Mai Chen</h3>
+                            <p class="photographer-location">Westminster, California</p>
+                            <p class="photographer-specialty">Family & Tradition</p>
+                            <p class="photographer-description">Chronicles multi-generational Vietnamese families in America, documenting how traditions adapt and persist across cultures.</p>
+                            <a href="#" class="photographer-portfolio-link">View Work</a>
+                        </div>
+                    </div>
+
+                    <div class="photographer-card observe" data-category="vietnam established">
+                        <div class="photographer-image">
+                            <div class="image-placeholder" data-caption="Portrait of Duc Vo in rural Vietnamese countryside"></div>
+                        </div>
+                        <div class="photographer-info">
+                            <h3 class="photographer-name">Duc Vo</h3>
+                            <p class="photographer-location">Mekong Delta, Vietnam</p>
+                            <p class="photographer-specialty">Rural Life & Agriculture</p>
+                            <p class="photographer-description">Documents the changing landscape of rural Vietnam, capturing the resilience and traditions of farming communities.</p>
+                            <a href="#" class="photographer-portfolio-link">View Work</a>
+                        </div>
+                    </div>
+
+                    <div class="photographer-card observe" data-category="diaspora emerging">
+                        <div class="photographer-image">
+                            <div class="image-placeholder" data-caption="Portrait of young photographer Kim Ly in urban setting"></div>
+                        </div>
+                        <div class="photographer-info">
+                            <h3 class="photographer-name">Kim Ly</h3>
+                            <p class="photographer-location">Toronto, Canada</p>
+                            <p class="photographer-specialty">Street & Social Documentary</p>
+                            <p class="photographer-description">Emerging photographer exploring Vietnamese-Canadian identity through street photography and social documentary work.</p>
+                            <a href="#" class="photographer-portfolio-link">View Work</a>
+                        </div>
+                    </div>
+
+                    <div class="photographer-card observe" data-category="vietnam emerging">
+                        <div class="photographer-image">
+                            <div class="image-placeholder" data-caption="Portrait of Huong Bui with traditional crafts"></div>
+                        </div>
+                        <div class="photographer-info">
+                            <h3 class="photographer-name">Huong Bui</h3>
+                            <p class="photographer-location">Hoi An, Vietnam</p>
+                            <p class="photographer-specialty">Traditional Crafts</p>
+                            <p class="photographer-description">Young photographer specializing in documenting traditional Vietnamese crafts and the artisans who keep these skills alive.</p>
+                            <a href="#" class="photographer-portfolio-link">View Work</a>
+                        </div>
+                    </div>
+
+                    <div class="photographer-card observe" data-category="diaspora established">
+                        <div class="photographer-image">
+                            <div class="image-placeholder" data-caption="Portrait of photographer Peter Nguyen in Australian cityscape"></div>
+                        </div>
+                        <div class="photographer-info">
+                            <h3 class="photographer-name">Peter Nguyen</h3>
+                            <p class="photographer-location">Sydney, Australia</p>
+                            <p class="photographer-specialty">Cultural Integration</p>
+                            <p class="photographer-description">Documents the Vietnamese-Australian experience, focusing on how cultural practices evolve in new environments.</p>
+                            <a href="#" class="photographer-portfolio-link">View Work</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="photographers-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Are you a Vietnamese photographer?</h2>
+                    <p class="cta-description">We're always looking to collaborate with talented photographers who share our mission of documenting Vietnamese culture and heritage.</p>
+                    <a href="collaborate.html" class="cta-button">Join Our Community</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@vietnamstreets.com">Email</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Submit Story</a></li>
+                    <li><a href="#">Host Event</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vietnam Streets. Documenting culture, preserving heritage.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/photographers.js"></script>
+</body>
+</html>

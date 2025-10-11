@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Streets — Documenting Vietnamese Cultural Heritage</title>
+    <meta name="description" content="Vietnam Streets documents Vietnamese cultural heritage through photography, stories, and community events. Explore authentic narratives from Vietnam and the global diaspora.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/event-registration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#" class="logo-link">Vietnam Streets</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="pages/stories.html">Stories</a>
+                    <a href="pages/photographers.html">Photographers</a>
+                    <a href="pages/learn.html">Learn</a>
+                    <a href="pages/store.html">Store</a>
+                    <a href="pages/prints.html">Fine Prints</a>
+                    <a href="pages/events.html">Cultural Events</a>
+                    <a href="pages/diaspora.html">Diaspora Stories</a>
+                    <a href="pages/collaborate.html">Work With Us</a>
+                </div>
+                <div class="nav-right">
+                    <a href="pages/search.html" class="nav-link">Search</a>
+                    <a href="pages/connect.html" class="nav-link">Connect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-image">
+                <img src="assets/images/hero/hero-vietnam-streets.jpg" alt="Street vendor in Saigon's District 1, capturing the essence of daily Vietnamese life">
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Preserving Vietnamese Culture Through Lens & Story</h1>
+                    <p class="hero-subtitle">Join photographers, storytellers, and community members capturing the essence of Vietnamese life across generations and borders.</p>
+                </div>
+                <div class="hero-meta">
+                    <span class="hero-location">Worldwide</span>
+                    <span class="hero-date">2025 — Ongoing</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="stories" id="stories">
+            <div class="section-header">
+                <h2 class="section-title">Latest Stories</h2>
+                <p class="section-subtitle">Visual narratives from Vietnamese communities around the world</p>
+            </div>
+
+            <div class="stories-grid">
+                <article class="story-card featured">
+                    <div class="story-image">
+                        <div class="image-placeholder" data-caption="Elderly woman preparing traditional bánh chưng for Tết celebration"></div>
+                    </div>
+                    <div class="story-content">
+                        <span class="story-category">Heritage</span>
+                        <h3 class="story-title">The Art of Tết Preparation</h3>
+                        <p class="story-excerpt">Three generations of women gather to prepare traditional foods for Vietnamese New Year, maintaining customs passed down through centuries.</p>
+                        <div class="story-meta">
+                            <span class="story-location">Ho Chi Minh City</span>
+                            <span class="story-date">January 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="story-card">
+                    <div class="story-image">
+                        <div class="image-placeholder" data-caption="Young Vietnamese-American chef in San Francisco"></div>
+                    </div>
+                    <div class="story-content">
+                        <span class="story-category">Diaspora</span>
+                        <h3 class="story-title">Flavors of Home</h3>
+                        <p class="story-excerpt">A second-generation Vietnamese-American chef brings ancestral recipes to life in San Francisco's Mission District.</p>
+                        <div class="story-meta">
+                            <span class="story-location">San Francisco</span>
+                            <span class="story-date">December 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="story-card">
+                    <div class="story-image">
+                        <div class="image-placeholder" data-caption="Traditional ao dai seamstress at work"></div>
+                    </div>
+                    <div class="story-content">
+                        <span class="story-category">Craftsmanship</span>
+                        <h3 class="story-title">Threads of Tradition</h3>
+                        <p class="story-excerpt">Master seamstress continues the delicate art of ao dai creation, preserving techniques refined over generations.</p>
+                        <div class="story-meta">
+                            <span class="story-location">Hoi An</span>
+                            <span class="story-date">November 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="events" id="events">
+            <div class="section-header">
+                <h2 class="section-title">Events & Workshops</h2>
+                <p class="section-subtitle">Join us in exploring and celebrating Vietnamese culture</p>
+            </div>
+
+            <div id="events-container" class="events-container">
+                <div class="loading">Loading events...</div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="section-header">
+                <h2 class="section-title">Community Gallery</h2>
+                <p class="section-subtitle">Moments captured by our community</p>
+            </div>
+
+            <div id="instagram-feed" class="gallery-grid">
+                <div class="loading">Loading gallery...</div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Vietnam Streets</h2>
+                    <div class="about-description">
+                        <p>Vietnam Streets is a visual storytelling project documenting the rich cultural heritage of Vietnamese communities worldwide. Through photography, personal narratives, and community events, we create a living archive of Vietnamese life—honoring the past while celebrating its evolution.</p>
+
+                        <p>Our mission is to preserve the stories that shape Vietnamese identity: the street vendor who's perfected her phở recipe over decades, the second-generation Vietnamese-American navigating two cultures, the master craftsman keeping traditional arts alive. From the bustling streets of Saigon to Little Saigon in California, from Hanoi's Old Quarter to Vietnamese communities in Paris and Sydney, we capture moments both monumental and intimate.</p>
+
+                        <p>Founded in 2025, Vietnam Streets operates as a collaborative platform. We welcome photographers, writers, oral historians, and community members who share our commitment to authentic cultural documentation. Every image tells a story. Every story preserves a legacy.</p>
+
+                        <p><strong>Join us in documenting what matters.</strong></p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder" data-caption="Community gathering at Vietnam Streets cultural event"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:vietnamstreetscommunity@gmail.com">Email</a></li>
+                    <li><a href="https://instagram.com/vietnamstreets" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="pages/connect.html">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="pages/collaborate.html">Submit Story</a></li>
+                    <li><a href="mailto:vietnamstreetscommunity@gmail.com?subject=Host Event Inquiry">Host Event</a></li>
+                    <li><a href="pages/collaborate.html">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="pages/collaborate.html">Donate</a></li>
+                    <li><a href="pages/collaborate.html">Volunteer</a></li>
+                    <li><a href="mailto:vietnamstreetscommunity@gmail.com?subject=Sponsorship Inquiry">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vietnam Streets. Documenting culture, preserving heritage.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/event-registration.js"></script>
+</body>
+</html>

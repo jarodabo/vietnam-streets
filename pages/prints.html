@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Prints — Vietnam Streets</title>
+    <meta name="description" content="Limited edition fine art prints of Vietnamese photography. Museum-quality prints capturing the essence of Vietnamese culture and heritage.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-link">Vietnam Streets</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="stories.html">Stories</a>
+                    <a href="photographers.html">Photographers</a>
+                    <a href="learn.html">Learn</a>
+                    <a href="store.html">Store</a>
+                    <a href="prints.html" class="active">Fine Prints</a>
+                    <a href="events.html">Cultural Events</a>
+                    <a href="diaspora.html">Diaspora Stories</a>
+                    <a href="collaborate.html">Work With Us</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#search" class="nav-link">Search</a>
+                    <a href="#connect" class="nav-link">Connect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Fine Prints</h1>
+                <p class="page-subtitle">Museum-quality photographic prints celebrating Vietnamese culture. Limited editions crafted with archival materials for collectors and cultural enthusiasts.</p>
+            </div>
+        </section>
+
+        <section class="prints-filter">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Collections</button>
+                    <button class="filter-btn" data-filter="limited">Limited Edition</button>
+                    <button class="filter-btn" data-filter="heritage">Heritage Series</button>
+                    <button class="filter-btn" data-filter="contemporary">Contemporary</button>
+                    <button class="filter-btn" data-filter="diaspora">Diaspora Stories</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-print">
+            <div class="container">
+                <div class="featured-print-content observe">
+                    <div class="featured-print-image">
+                        <div class="image-placeholder" data-caption="Limited edition print: Morning ritual in Old Quarter Hanoi by Minh Nguyen"></div>
+                        <div class="print-edition-info">
+                            <span class="edition-number">Edition 1/25</span>
+                        </div>
+                    </div>
+                    <div class="featured-print-details">
+                        <span class="print-collection">Heritage Series</span>
+                        <h2 class="print-title">Morning Ritual, Old Quarter</h2>
+                        <p class="print-artist">by Minh Nguyen</p>
+                        <p class="print-description">Captured in the early morning light of Hanoi's Old Quarter, this image documents the timeless ritual of street vendors preparing for another day. The interplay of shadow and steam creates a meditation on tradition and continuity.</p>
+
+                        <div class="print-specifications">
+                            <div class="spec-group">
+                                <h4>Print Details</h4>
+                                <ul>
+                                    <li>Archival pigment print</li>
+                                    <li>Museum-quality paper</li>
+                                    <li>Limited to 25 editions</li>
+                                    <li>Hand-signed by artist</li>
+                                </ul>
+                            </div>
+                            <div class="spec-group">
+                                <h4>Available Sizes</h4>
+                                <ul>
+                                    <li>16" × 20" - $485</li>
+                                    <li>20" × 24" - $685</li>
+                                    <li>24" × 30" - $925</li>
+                                    <li>30" × 40" - $1,485</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="print-actions">
+                            <button class="inquire-btn">Inquire About This Print</button>
+                            <a href="#" class="view-certificate">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="prints-gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Available Prints</h2>
+                    <p class="section-subtitle">Curated collection of fine art photography</p>
+                </div>
+
+                <div class="prints-grid" id="printsGrid">
+
+                    <div class="print-card observe" data-category="limited heritage">
+                        <div class="print-image">
+                            <div class="image-placeholder" data-caption="Temple incense ceremony in Ho Chi Minh City"></div>
+                            <div class="print-overlay">
+                                <div class="overlay-content">
+                                    <span class="print-size">Multiple sizes</span>
+                                    <span class="print-edition">Ed. 15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print-info">
+                            <h3 class="print-name">Sacred Smoke</h3>
+                            <p class="print-photographer">Linh Pham</p>
+                            <p class="print-series">Heritage Series</p>
+                            <p class="print-price">From $425</p>
+                        </div>
+                    </div>
+
+                    <div class="print-card observe" data-category="contemporary">
+                        <div class="print-image">
+                            <div class="image-placeholder" data-caption="Young Vietnamese street artist in urban Saigon"></div>
+                            <div class="print-overlay">
+                                <div class="overlay-content">
+                                    <span class="print-size">Multiple sizes</span>
+                                    <span class="print-edition">Ed. 20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print-info">
+                            <h3 class="print-name">Urban Expression</h3>
+                            <p class="print-photographer">An Le</p>
+                            <p class="print-series">Contemporary Vietnam</p>
+                            <p class="print-price">From $385</p>
+                        </div>
+                    </div>
+
+                    <div class="print-card observe" data-category="diaspora">
+                        <div class="print-image">
+                            <div class="image-placeholder" data-caption="Vietnamese family celebration in California"></div>
+                            <div class="print-overlay">
+                                <div class="overlay-content">
+                                    <span class="print-size">Multiple sizes</span>
+                                    <span class="print-edition">Ed. 12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print-info">
+                            <h3 class="print-name">Generations United</h3>
+                            <p class="print-photographer">David Tran</p>
+                            <p class="print-series">Diaspora Stories</p>
+                            <p class="print-price">From $525</p>
+                        </div>
+                    </div>
+
+                    <div class="print-card observe" data-category="limited heritage">
+                        <div class="print-image">
+                            <div class="image-placeholder" data-caption="Traditional ao dai seamstress at work in Hoi An"></div>
+                            <div class="print-overlay">
+                                <div class="overlay-content">
+                                    <span class="print-size">Multiple sizes</span>
+                                    <span class="print-edition">Ed. 10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print-info">
+                            <h3 class="print-name">Threads of Heritage</h3>
+                            <p class="print-photographer">Huong Bui</p>
+                            <p class="print-series">Craftsmanship</p>
+                            <p class="print-price">From $625</p>
+                        </div>
+                    </div>
+
+                    <div class="print-card observe" data-category="contemporary">
+                        <div class="print-image">
+                            <div class="image-placeholder" data-caption="Modern Vietnamese architecture in Da Nang"></div>
+                            <div class="print-overlay">
+                                <div class="overlay-content">
+                                    <span class="print-size">Multiple sizes</span>
+                                    <span class="print-edition">Ed. 25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print-info">
+                            <h3 class="print-name">Rising Skyline</h3>
+                            <p class="print-photographer">An Le</p>
+                            <p class="print-series">Modern Vietnam</p>
+                            <p class="print-price">From $365</p>
+                        </div>
+                    </div>
+
+                    <div class="print-card observe" data-category="heritage">
+                        <div class="print-image">
+                            <div class="image-placeholder" data-caption="Water puppet performance in rural Vietnam"></div>
+                            <div class="print-overlay">
+                                <div class="overlay-content">
+                                    <span class="print-size">Multiple sizes</span>
+                                    <span class="print-edition">Ed. 18</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print-info">
+                            <h3 class="print-name">Ancient Stories</h3>
+                            <p class="print-photographer">Duc Vo</p>
+                            <p class="print-series">Traditional Arts</p>
+                            <p class="print-price">From $485</p>
+                        </div>
+                    </div>
+
+                    <div class="print-card observe" data-category="diaspora">
+                        <div class="print-image">
+                            <div class="image-placeholder" data-caption="Vietnamese restaurant in Sydney's Cabramatta"></div>
+                            <div class="print-overlay">
+                                <div class="overlay-content">
+                                    <span class="print-size">Multiple sizes</span>
+                                    <span class="print-edition">Ed. 16</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print-info">
+                            <h3 class="print-name">Taste of Home</h3>
+                            <p class="print-photographer">Peter Nguyen</p>
+                            <p class="print-series">Global Community</p>
+                            <p class="print-price">From $445</p>
+                        </div>
+                    </div>
+
+                    <div class="print-card observe" data-category="limited contemporary">
+                        <div class="print-image">
+                            <div class="image-placeholder" data-caption="Night market scene in Ho Chi Minh City"></div>
+                            <div class="print-overlay">
+                                <div class="overlay-content">
+                                    <span class="print-size">Multiple sizes</span>
+                                    <span class="print-edition">Ed. 8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print-info">
+                            <h3 class="print-name">Neon Nights</h3>
+                            <p class="print-photographer">Minh Nguyen</p>
+                            <p class="print-series">Urban Life</p>
+                            <p class="print-price">From $785</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="prints-info">
+            <div class="container">
+                <div class="info-content">
+                    <div class="info-text">
+                        <h2 class="section-title">Museum-Quality Standards</h2>
+                        <div class="info-description">
+                            <p>Each fine print is created using archival pigment inks on museum-quality papers, ensuring longevity and color accuracy that will last generations. Our printing partners employ the highest standards of color management and quality control.</p>
+                            <p>Every print comes with a certificate of authenticity, detailed provenance information, and care instructions. Limited editions are strictly controlled, with each print hand-signed and numbered by the artist.</p>
+                            <p>We offer custom framing services using conservation-grade materials, and worldwide shipping with full insurance and tracking.</p>
+                        </div>
+                    </div>
+                    <div class="info-services">
+                        <h3>Services Included</h3>
+                        <ul class="services-list">
+                            <li>Certificate of authenticity</li>
+                            <li>Artist signature and numbering</li>
+                            <li>Conservation packaging</li>
+                            <li>Worldwide insured shipping</li>
+                            <li>Custom framing available</li>
+                            <li>30-day return guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@vietnamstreets.com">Email</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Submit Story</a></li>
+                    <li><a href="#">Host Event</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vietnam Streets. Documenting culture, preserving heritage.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/prints.js"></script>
+</body>
+</html>

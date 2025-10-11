@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search — Vietnam Streets</title>
+    <meta name="description" content="Search through our collection of Vietnamese cultural stories, photographers, and heritage documentation.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-link">Vietnam Streets</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="stories.html">Stories</a>
+                    <a href="photographers.html">Photographers</a>
+                    <a href="learn.html">Learn</a>
+                    <a href="store.html">Store</a>
+                    <a href="prints.html">Fine Prints</a>
+                    <a href="events.html">Cultural Events</a>
+                    <a href="diaspora.html">Diaspora Stories</a>
+                    <a href="collaborate.html">Work With Us</a>
+                </div>
+                <div class="nav-right">
+                    <a href="search.html" class="nav-link active">Search</a>
+                    <a href="connect.html" class="nav-link">Connect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Search</h1>
+                <p class="page-subtitle">Explore our archive of Vietnamese cultural heritage, stories, and photography.</p>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-bar-wrapper">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search stories, photographers, locations, or topics...">
+                        <button class="search-button" id="searchButton">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="search-filters">
+                        <h3>Filter by:</h3>
+                        <div class="filter-pills">
+                            <button class="filter-pill active" data-filter="all">All</button>
+                            <button class="filter-pill" data-filter="stories">Stories</button>
+                            <button class="filter-pill" data-filter="photographers">Photographers</button>
+                            <button class="filter-pill" data-filter="events">Events</button>
+                            <button class="filter-pill" data-filter="heritage">Heritage</button>
+                            <button class="filter-pill" data-filter="diaspora">Diaspora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-results" id="searchResults">
+                    <div class="search-suggestions">
+                        <h3>Popular Searches</h3>
+                        <div class="suggestion-tags">
+                            <button class="suggestion-tag">Tết celebrations</button>
+                            <button class="suggestion-tag">Ao dai tradition</button>
+                            <button class="suggestion-tag">Street vendors</button>
+                            <button class="suggestion-tag">Vietnamese cuisine</button>
+                            <button class="suggestion-tag">Water puppets</button>
+                            <button class="suggestion-tag">Saigon</button>
+                            <button class="suggestion-tag">Hanoi</button>
+                            <button class="suggestion-tag">Little Saigon</button>
+                            <button class="suggestion-tag">Traditional crafts</button>
+                            <button class="suggestion-tag">Family heritage</button>
+                        </div>
+                    </div>
+
+                    <div class="recent-content">
+                        <h3>Recently Added</h3>
+                        <div class="recent-items">
+                            <a href="#" class="recent-item">
+                                <div class="recent-item-image">
+                                    <div class="image-placeholder" data-caption="Recent story thumbnail"></div>
+                                </div>
+                                <div class="recent-item-content">
+                                    <span class="recent-item-type">Story</span>
+                                    <h4>The Art of Tết Preparation</h4>
+                                    <p class="recent-item-location">Ho Chi Minh City</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="recent-item">
+                                <div class="recent-item-image">
+                                    <div class="image-placeholder" data-caption="Recent photographer thumbnail"></div>
+                                </div>
+                                <div class="recent-item-content">
+                                    <span class="recent-item-type">Photographer</span>
+                                    <h4>Minh Nguyen</h4>
+                                    <p class="recent-item-location">Ho Chi Minh City, Vietnam</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="recent-item">
+                                <div class="recent-item-image">
+                                    <div class="image-placeholder" data-caption="Recent event thumbnail"></div>
+                                </div>
+                                <div class="recent-item-content">
+                                    <span class="recent-item-type">Event</span>
+                                    <h4>Vietnamese Film Screening</h4>
+                                    <p class="recent-item-location">San Francisco, CA</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@vietnamstreets.com">Email</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Submit Story</a></li>
+                    <li><a href="#">Host Event</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vietnam Streets. Documenting culture, preserving heritage.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

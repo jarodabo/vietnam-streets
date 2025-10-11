@@ -1,0 +1,107 @@
+[
+  {
+    "id": "photographer-1",
+    "name": "Minh Nguyen",
+    "location": "Ho Chi Minh City, Vietnam",
+    "specialty": "Street Photography",
+    "bio": "Documenting the vibrant street life and urban culture of Vietnam's largest city.",
+    "experience": "12 years",
+    "portfolio": [
+      {
+        "title": "Saigon Morning Rush",
+        "description": "Early morning energy in District 1"
+      },
+      {
+        "title": "Floating Market Chronicles",
+        "description": "Traditional commerce on the Mekong Delta"
+      }
+    ],
+    "avatar": "/images/photographer-minh.jpg",
+    "featured": true,
+    "createdAt": "2024-11-01T00:00:00.000Z"
+  },
+  {
+    "id": "photographer-2",
+    "name": "Linh Pham",
+    "location": "Hanoi, Vietnam",
+    "specialty": "Heritage & Architecture",
+    "bio": "Preserving Vietnam's architectural heritage through detailed documentary photography.",
+    "experience": "8 years",
+    "portfolio": [
+      {
+        "title": "Temple Restoration",
+        "description": "Documenting the careful restoration of ancient temples"
+      },
+      {
+        "title": "Old Quarter Stories",
+        "description": "Architectural layers of Hanoi's historic district"
+      }
+    ],
+    "avatar": "/images/photographer-linh.jpg",
+    "featured": true,
+    "createdAt": "2024-10-15T00:00:00.000Z"
+  },
+  {
+    "id": "photographer-3",
+    "name": "David Tran",
+    "location": "San Francisco, CA",
+    "specialty": "Community & Identity",
+    "bio": "Exploring Vietnamese-American identity and community building in diaspora settings.",
+    "experience": "6 years",
+    "portfolio": [
+      {
+        "title": "Little Saigon Chronicles",
+        "description": "Vietnamese community life in California"
+      },
+      {
+        "title": "Second Generation",
+        "description": "Young Vietnamese-Americans navigating dual cultures"
+      }
+    ],
+    "avatar": "/images/photographer-david.jpg",
+    "featured": true,
+    "createdAt": "2024-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "photographer-4",
+    "name": "Thu Vo",
+    "location": "Hoi An, Vietnam",
+    "specialty": "Traditional Crafts",
+    "bio": "Documenting traditional Vietnamese craftsmanship and artisan communities.",
+    "experience": "15 years",
+    "portfolio": [
+      {
+        "title": "Lantern Makers",
+        "description": "Traditional silk lantern crafting in Hoi An"
+      },
+      {
+        "title": "Textile Heritage",
+        "description": "Ancient weaving techniques passed through generations"
+      }
+    ],
+    "avatar": "/images/photographer-thu.jpg",
+    "featured": false,
+    "createdAt": "2024-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "photographer-5",
+    "name": "James Kim",
+    "location": "Toronto, Canada",
+    "specialty": "Food Culture",
+    "bio": "Capturing the stories behind Vietnamese cuisine and the people who keep traditions alive.",
+    "experience": "4 years",
+    "portfolio": [
+      {
+        "title": "Pho Origins",
+        "description": "Tracing the evolution of Vietnam's national dish"
+      },
+      {
+        "title": "Family Recipes",
+        "description": "Grandmother's cooking traditions in Canadian kitchens"
+      }
+    ],
+    "avatar": "/images/photographer-james.jpg",
+    "featured": false,
+    "createdAt": "2024-07-05T00:00:00.000Z"
+  }
+]

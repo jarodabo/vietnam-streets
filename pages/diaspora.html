@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diaspora Stories — Vietnam Streets</title>
+    <meta name="description" content="Stories from Vietnamese communities worldwide, documenting cultural adaptation, preservation, and the global Vietnamese experience across generations.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-link">Vietnam Streets</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="stories.html">Stories</a>
+                    <a href="photographers.html">Photographers</a>
+                    <a href="learn.html">Learn</a>
+                    <a href="store.html">Store</a>
+                    <a href="prints.html">Fine Prints</a>
+                    <a href="events.html">Cultural Events</a>
+                    <a href="diaspora.html" class="active">Diaspora Stories</a>
+                    <a href="collaborate.html">Work With Us</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#search" class="nav-link">Search</a>
+                    <a href="#connect" class="nav-link">Connect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Diaspora Stories</h1>
+                <p class="page-subtitle">Documenting the global Vietnamese experience—stories of migration, adaptation, and cultural preservation across generations and continents.</p>
+            </div>
+        </section>
+
+        <section class="diaspora-stats">
+            <div class="container">
+                <div class="stats-grid observe">
+                    <div class="stat-item">
+                        <span class="stat-number">4.5M</span>
+                        <span class="stat-label">Vietnamese Diaspora Worldwide</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries with Vietnamese Communities</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Generations Documented</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1,000+</span>
+                        <span class="stat-label">Stories Collected</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-filter">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Locations</button>
+                    <button class="filter-btn" data-filter="usa">United States</button>
+                    <button class="filter-btn" data-filter="canada">Canada</button>
+                    <button class="filter-btn" data-filter="australia">Australia</button>
+                    <button class="filter-btn" data-filter="europe">Europe</button>
+                    <button class="filter-btn" data-filter="asia">Asia</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-diaspora-story">
+            <div class="container">
+                <div class="featured-story-content observe">
+                    <div class="featured-story-image">
+                        <div class="image-placeholder" data-caption="Three generations of Vietnamese-American family in San Jose, California"></div>
+                        <div class="story-location-badge">
+                            <span class="location-flag">🇺🇸</span>
+                            <span class="location-name">San Jose, CA</span>
+                        </div>
+                    </div>
+                    <div class="featured-story-details">
+                        <span class="story-type">Multi-Generational</span>
+                        <h2 class="story-headline">Three Generations, One Heritage</h2>
+                        <p class="story-byline">The Nguyen Family • Silicon Valley, California</p>
+                        <p class="story-lead">From boat refugees to tech entrepreneurs, the Nguyen family's journey spans three generations and embodies the Vietnamese-American dream. Their story illuminates how cultural identity evolves while remaining deeply rooted in tradition.</p>
+
+                        <div class="story-highlights">
+                            <div class="highlight-item">
+                                <h4>First Generation</h4>
+                                <p>Escaped Vietnam by boat in 1979, rebuilt life as restaurateurs in San Jose's Vietnamese district.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <h4>Second Generation</h4>
+                                <p>Bridged cultures, pursued higher education, maintained language and traditions while building professional careers.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <h4>Third Generation</h4>
+                                <p>Tech innovators reconnecting with heritage, teaching Vietnamese to their children, traveling back to Vietnam.</p>
+                            </div>
+                        </div>
+
+                        <div class="story-actions">
+                            <a href="#" class="read-story-btn">Read Full Story</a>
+                            <a href="#" class="view-photos-link">View Photo Series</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="diaspora-stories-grid">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Global Vietnamese Voices</h2>
+                    <p class="section-subtitle">Stories from Vietnamese communities around the world</p>
+                </div>
+
+                <div class="stories-grid" id="diasporaGrid">
+
+                    <div class="diaspora-story-card observe" data-location="usa">
+                        <div class="story-image">
+                            <div class="image-placeholder" data-caption="Vietnamese restaurant owner in New Orleans after Hurricane Katrina"></div>
+                            <div class="location-tag">🇺🇸 New Orleans, LA</div>
+                        </div>
+                        <div class="story-info">
+                            <span class="story-theme">Resilience</span>
+                            <h3 class="story-title">Rebuilding After the Storm</h3>
+                            <p class="story-excerpt">How the Vietnamese community in New Orleans' East Village rebuilt stronger after Hurricane Katrina, becoming a model of community resilience and cultural preservation.</p>
+                            <div class="story-meta">
+                                <span class="author">Mai Bui</span>
+                                <span class="year">2023</span>
+                            </div>
+                            <a href="#" class="story-link">Read Story</a>
+                        </div>
+                    </div>
+
+                    <div class="diaspora-story-card observe" data-location="canada">
+                        <div class="story-image">
+                            <div class="image-placeholder" data-caption="Vietnamese family celebrating Tết in Toronto's Chinatown"></div>
+                            <div class="location-tag">🇨🇦 Toronto, ON</div>
+                        </div>
+                        <div class="story-info">
+                            <span class="story-theme">Tradition</span>
+                            <h3 class="story-title">Tết in the Six</h3>
+                            <p class="story-excerpt">Exploring how Vietnamese-Canadians celebrate Lunar New Year in Toronto, adapting ancestral traditions to Canadian winters while maintaining cultural authenticity.</p>
+                            <div class="story-meta">
+                                <span class="author">David Ly</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <a href="#" class="story-link">Read Story</a>
+                        </div>
+                    </div>
+
+                    <div class="diaspora-story-card observe" data-location="australia">
+                        <div class="story-image">
+                            <div class="image-placeholder" data-caption="Vietnamese fishermen in Darwin, Northern Territory"></div>
+                            <div class="location-tag">🇦🇺 Darwin, NT</div>
+                        </div>
+                        <div class="story-info">
+                            <span class="story-theme">Livelihood</span>
+                            <h3 class="story-title">Fishermen of the Top End</h3>
+                            <p class="story-excerpt">Vietnamese fishing families who found new waters in Australia's Northern Territory, bringing traditional techniques to Australian seas while building prosperous communities.</p>
+                            <div class="story-meta">
+                                <span class="author">An Pham</span>
+                                <span class="year">2023</span>
+                            </div>
+                            <a href="#" class="story-link">Read Story</a>
+                        </div>
+                    </div>
+
+                    <div class="diaspora-story-card observe" data-location="europe">
+                        <div class="story-image">
+                            <div class="image-placeholder" data-caption="Vietnamese market vendors in Berlin's Dong Xuan Center"></div>
+                            <div class="location-tag">🇩🇪 Berlin, Germany</div>
+                        </div>
+                        <div class="story-info">
+                            <span class="story-theme">Commerce</span>
+                            <h3 class="story-title">The Berlin Connection</h3>
+                            <p class="story-excerpt">From Cold War divisions to reunification, Vietnamese families in Berlin created Europe's largest Vietnamese market, bridging East and West through trade and culture.</p>
+                            <div class="story-meta">
+                                <span class="author">Linh Hoang</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <a href="#" class="story-link">Read Story</a>
+                        </div>
+                    </div>
+
+                    <div class="diaspora-story-card observe" data-location="asia">
+                        <div class="story-image">
+                            <div class="image-placeholder" data-caption="Vietnamese entrepreneur in Singapore's business district"></div>
+                            <div class="location-tag">🇸🇬 Singapore</div>
+                        </div>
+                        <div class="story-info">
+                            <span class="story-theme">Innovation</span>
+                            <h3 class="story-title">Southeast Asian Success</h3>
+                            <p class="story-excerpt">Vietnamese entrepreneurs in Singapore leverage cultural ties and language skills to build bridges between Vietnam and Southeast Asian markets.</p>
+                            <div class="story-meta">
+                                <span class="author">Duc Tran</span>
+                                <span class="year">2023</span>
+                            </div>
+                            <a href="#" class="story-link">Read Story</a>
+                        </div>
+                    </div>
+
+                    <div class="diaspora-story-card observe" data-location="usa">
+                        <div class="story-image">
+                            <div class="image-placeholder" data-caption="Young Vietnamese-American artist in Brooklyn studio"></div>
+                            <div class="location-tag">🇺🇸 Brooklyn, NY</div>
+                        </div>
+                        <div class="story-info">
+                            <span class="story-theme">Identity</span>
+                            <h3 class="story-title">Art as Heritage</h3>
+                            <p class="story-excerpt">Second-generation Vietnamese-American artists in New York explore cultural identity through contemporary art, creating new forms of cultural expression and preservation.</p>
+                            <div class="story-meta">
+                                <span class="author">Kim Chen</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <a href="#" class="story-link">Read Story</a>
+                        </div>
+                    </div>
+
+                    <div class="diaspora-story-card observe" data-location="europe">
+                        <div class="story-image">
+                            <div class="image-placeholder" data-caption="Vietnamese restaurant family in Paris's 13th arrondissement"></div>
+                            <div class="location-tag">🇫🇷 Paris, France</div>
+                        </div>
+                        <div class="story-info">
+                            <span class="story-theme">Cuisine</span>
+                            <h3 class="story-title">Pho in the City of Light</h3>
+                            <p class="story-excerpt">Vietnamese culinary culture thrives in Paris, where traditional pho meets French culinary sophistication in the city's vibrant 13th arrondissement.</p>
+                            <div class="story-meta">
+                                <span class="author">Minh Le</span>
+                                <span class="year">2023</span>
+                            </div>
+                            <a href="#" class="story-link">Read Story</a>
+                        </div>
+                    </div>
+
+                    <div class="diaspora-story-card observe" data-location="canada">
+                        <div class="story-image">
+                            <div class="image-placeholder" data-caption="Vietnamese community center in Vancouver's Kingsway"></div>
+                            <div class="location-tag">🇨🇦 Vancouver, BC</div>
+                        </div>
+                        <div class="story-info">
+                            <span class="story-theme">Community</span>
+                            <h3 class="story-title">Kingsway Connections</h3>
+                            <p class="story-excerpt">Vancouver's Vietnamese community built a thriving cultural corridor along Kingsway, creating institutions that serve multiple generations and preserve heritage.</p>
+                            <div class="story-meta">
+                                <span class="author">Hoa Nguyen</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <a href="#" class="story-link">Read Story</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="submit-story-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Share Your Diaspora Story</h2>
+                    <p class="cta-description">Your family's journey matters. Help us document the diverse experiences of Vietnamese communities worldwide by sharing your story with our global community.</p>
+                    <div class="cta-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">📸</span>
+                            <span class="feature-text">Photo documentation</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎙️</span>
+                            <span class="feature-text">Oral history interviews</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✍️</span>
+                            <span class="feature-text">Written narratives</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🗺️</span>
+                            <span class="feature-text">Global mapping</span>
+                        </div>
+                    </div>
+                    <a href="collaborate.html" class="cta-button">Submit Your Story</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@vietnamstreets.com">Email</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Submit Story</a></li>
+                    <li><a href="#">Host Event</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vietnam Streets. Documenting culture, preserving heritage.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/diaspora.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "tet-preparation-2025",
+    "title": "The Art of Tết Preparation",
+    "slug": "tet-preparation-2025",
+    "category": "heritage",
+    "photographer": {
+      "name": "Example Photographer",
+      "bio": "Documentary photographer specializing in Vietnamese cultural traditions",
+      "website": "https://example.com",
+      "instagram": "@example"
+    },
+    "location": {
+      "city": "Mekong Delta",
+      "country": "Vietnam",
+      "coordinates": {
+        "lat": 10.0,
+        "lng": 105.7
+      }
+    },
+    "date": "January 2025",
+    "publishDate": "2025-01-15",
+    "featured": true,
+    "coverImage": {
+      "url": "/assets/images/stories/heritage/tet-preparation/cover.jpg",
+      "alt": "Elderly woman preparing traditional bánh chưng for Tết celebration",
+      "caption": "Three generations gather to prepare traditional Tết foods"
+    },
+    "summary": "Three generations of women gather in a rural village to prepare traditional foods for Vietnamese New Year, maintaining customs passed down through centuries of celebration.",
+    "story": {
+      "introduction": "As the lunar new year approaches, families across Vietnam gather to honor ancient traditions. In the Mekong Delta, we witness the timeless ritual of Tết preparation.",
+      "body": [
+        {
+          "type": "text",
+          "content": "The preparation begins days before the actual celebration. In rural Vietnamese villages, the making of bánh chưng remains a sacred family tradition, bringing together multiple generations in a labor of love that has remained unchanged for centuries."
+        },
+        {
+          "type": "image",
+          "url": "/assets/images/stories/heritage/tet-preparation/image-1.jpg",
+          "alt": "Hands wrapping sticky rice in banana leaves",
+          "caption": "The careful wrapping of glutinous rice and mung bean filling in banana leaves requires skill passed down through generations"
+        },
+        {
+          "type": "text",
+          "content": "Bà Năm, 72, learned this art from her grandmother. Now, she teaches her daughter and granddaughters the precise technique required to create the perfect square cake that symbolizes the earth in Vietnamese cosmology."
+        },
+        {
+          "type": "quote",
+          "content": "When we make bánh chưng together, we're not just preparing food. We're keeping our ancestors' spirits alive, sharing their wisdom with the next generation.",
+          "attribution": "Bà Năm, family matriarch"
+        },
+        {
+          "type": "image",
+          "url": "/assets/images/stories/heritage/tet-preparation/image-2.jpg",
+          "alt": "Three generations of women preparing Tết foods together",
+          "caption": "Grandmother, mother, and daughter work in harmony, each contributing their knowledge and skills"
+        },
+        {
+          "type": "text",
+          "content": "The youngest member of the family, 8-year-old Linh, watches intently as her grandmother's weathered hands expertly fold the banana leaves. Through observation and practice, she becomes part of an unbroken chain connecting past, present, and future."
+        }
+      ],
+      "conclusion": "As the cakes simmer overnight, filling the house with their distinctive aroma, these women have done more than prepare for Tết—they've woven another thread in the tapestry of Vietnamese cultural continuity."
+    },
+    "images": [
+      {
+        "url": "/assets/images/stories/heritage/tet-preparation/image-1.jpg",
+        "alt": "Hands wrapping sticky rice in banana leaves",
+        "caption": "The careful wrapping technique requires years of practice"
+      },
+      {
+        "url": "/assets/images/stories/heritage/tet-preparation/image-2.jpg",
+        "alt": "Three generations preparing food",
+        "caption": "Knowledge flows from grandmother to granddaughter"
+      },
+      {
+        "url": "/assets/images/stories/heritage/tet-preparation/image-3.jpg",
+        "alt": "Bánh chưng cooking over traditional fire",
+        "caption": "The cakes simmer overnight in the traditional method"
+      }
+    ],
+    "tags": ["Tết", "Traditional Food", "Family Traditions", "Mekong Delta", "Generational Knowledge", "Bánh Chưng"],
+    "relatedStories": ["voices-from-water", "lanterns-belonging"],
+    "metadata": {
+      "readTime": "5 min read",
+      "photoCount": 12,
+      "language": "en"
+    }
+  }
+]

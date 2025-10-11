@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Streets Admin Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav-tab {
+            background: transparent;
+            border: none;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            font-size: 0.95rem;
+            color: #666;
+            transition: all 0.2s;
+        }
+
+        .nav-tab.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .content-section {
+            display: none;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .add-btn {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .add-btn:hover {
+            background: #333;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            margin-right: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #333;
+        }
+
+        .btn-secondary {
+            background: #666;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+        }
+
+        .items-list {
+            margin-top: 2rem;
+        }
+
+        .item-card {
+            background: #f8f8f8;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-meta {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .item-actions {
+            margin-left: auto;
+        }
+
+        .preview-section {
+            background: #f9f9f9;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .preview-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .json-output {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.875rem;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            background: #f8f8f8;
+            border: 2px dashed #ddd;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 6px;
+            width: 100%;
+            margin-bottom: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .file-input-wrapper:hover {
+            border-color: #1a1a1a;
+        }
+
+        .file-input {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+
+            .nav-tab {
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Vietnam Streets Admin Panel</div>
+    </header>
+
+    <div class="container">
+        <div class="alert alert-info">
+            <strong>Content Management System</strong><br>
+            Use this panel to create and manage content for the Vietnam Streets website. All data is saved as JSON files that integrate with your existing site.
+        </div>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab active" onclick="switchTab('stories')">Stories</button>
+            <button class="nav-tab" onclick="switchTab('photographers')">Photographers</button>
+            <button class="nav-tab" onclick="switchTab('events')">Events</button>
+            <button class="nav-tab" onclick="switchTab('products')">Products</button>
+        </nav>
+
+        <!-- Stories Section -->
+        <div id="storiesSection" class="content-section active">
+            <div class="section-header">
+                <h2 class="section-title">Manage Stories</h2>
+                <button class="add-btn" onclick="clearForm('storyForm')">Add New Story</button>
+            </div>
+
+            <div class="form-grid">
+                <div>
+                    <form id="storyForm">
+                        <div class="form-group">
+                            <label for="storyTitle">Story Title</label>
+                            <input type="text" id="storyTitle" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="storyCategory">Category</label>
+                            <select id="storyCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="heritage">Heritage</option>
+                                <option value="community">Community</option>
+                                <option value="diaspora">Diaspora</option>
+                                <option value="crafts">Traditional Crafts</option>
+                                <option value="food">Food Culture</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="storyLocation">Location</label>
+                            <input type="text" id="storyLocation" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="storyDate">Date</label>
+                            <input type="date" id="storyDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="storyExcerpt">Story Excerpt</label>
+                            <textarea id="storyExcerpt" placeholder="Brief description of the story..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="storyImage">Image Caption</label>
+                            <input type="text" id="storyImage" placeholder="Describe the image for this story">
+                        </div>
+
+                        <button type="button" class="btn" onclick="addStory()">Add Story</button>
+                        <button type="button" class="btn btn-secondary" onclick="clearForm('storyForm')">Clear</button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="preview-section">
+                        <h3 class="preview-title">Current Stories</h3>
+                        <div id="storiesPreview">
+                            <div style="color: #666; font-style: italic;">No stories added yet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h3 class="preview-title">Generated JSON Data</h3>
+                <div class="json-output" id="storiesJSON">[]</div>
+                <button class="btn" onclick="downloadJSON('stories')" style="margin-top: 1rem;">Download stories.json</button>
+            </div>
+        </div>
+
+        <!-- Photographers Section -->
+        <div id="photographersSection" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Manage Photographers</h2>
+                <button class="add-btn" onclick="clearForm('photographerForm')">Add New Photographer</button>
+            </div>
+
+            <div class="form-grid">
+                <div>
+                    <form id="photographerForm">
+                        <div class="form-group">
+                            <label for="photographerName">Photographer Name</label>
+                            <input type="text" id="photographerName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photographerLocation">Location</label>
+                            <input type="text" id="photographerLocation" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photographerSpecialty">Specialty</label>
+                            <select id="photographerSpecialty" required>
+                                <option value="">Select Specialty</option>
+                                <option value="Street Photography">Street Photography</option>
+                                <option value="Documentary">Documentary</option>
+                                <option value="Portraits">Portraits</option>
+                                <option value="Heritage & Architecture">Heritage & Architecture</option>
+                                <option value="Community & Identity">Community & Identity</option>
+                                <option value="Contemporary Culture">Contemporary Culture</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photographerBio">Biography</label>
+                            <textarea id="photographerBio" placeholder="Brief biography of the photographer..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photographerCategory">Category</label>
+                            <select id="photographerCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="vietnam established">Vietnam - Established</option>
+                                <option value="vietnam emerging">Vietnam - Emerging</option>
+                                <option value="diaspora established">Diaspora - Established</option>
+                                <option value="diaspora emerging">Diaspora - Emerging</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn" onclick="addPhotographer()">Add Photographer</button>
+                        <button type="button" class="btn btn-secondary" onclick="clearForm('photographerForm')">Clear</button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="preview-section">
+                        <h3 class="preview-title">Current Photographers</h3>
+                        <div id="photographersPreview">
+                            <div style="color: #666; font-style: italic;">No photographers added yet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h3 class="preview-title">Generated JSON Data</h3>
+                <div class="json-output" id="photographersJSON">[]</div>
+                <button class="btn" onclick="downloadJSON('photographers')" style="margin-top: 1rem;">Download photographers.json</button>
+            </div>
+        </div>
+
+        <!-- Events Section -->
+        <div id="eventsSection" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Manage Events</h2>
+                <button class="add-btn" onclick="clearForm('eventForm')">Add New Event</button>
+            </div>
+
+            <div class="form-grid">
+                <div>
+                    <form id="eventForm">
+                        <div class="form-group">
+                            <label for="eventTitle">Event Title</label>
+                            <input type="text" id="eventTitle" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventType">Event Type</label>
+                            <select id="eventType" required>
+                                <option value="">Select Type</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="exhibition">Exhibition</option>
+                                <option value="festival">Festival</option>
+                                <option value="talk">Talk/Panel</option>
+                                <option value="community">Community Event</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventLocation">Location</label>
+                            <input type="text" id="eventLocation" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventDate">Date</label>
+                            <input type="date" id="eventDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventTime">Time</label>
+                            <input type="time" id="eventTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventDescription">Description</label>
+                            <textarea id="eventDescription" placeholder="Event description..." required></textarea>
+                        </div>
+
+                        <button type="button" class="btn" onclick="addEvent()">Add Event</button>
+                        <button type="button" class="btn btn-secondary" onclick="clearForm('eventForm')">Clear</button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="preview-section">
+                        <h3 class="preview-title">Current Events</h3>
+                        <div id="eventsPreview">
+                            <div style="color: #666; font-style: italic;">No events added yet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h3 class="preview-title">Generated JSON Data</h3>
+                <div class="json-output" id="eventsJSON">[]</div>
+                <button class="btn" onclick="downloadJSON('events')" style="margin-top: 1rem;">Download events.json</button>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div id="productsSection" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Manage Products</h2>
+                <button class="add-btn" onclick="clearForm('productForm')">Add New Product</button>
+            </div>
+
+            <div class="form-grid">
+                <div>
+                    <form id="productForm">
+                        <div class="form-group">
+                            <label for="productName">Product Name</label>
+                            <input type="text" id="productName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productCategory">Category</label>
+                            <select id="productCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="books">Books</option>
+                                <option value="prints">Prints</option>
+                                <option value="apparel">Apparel</option>
+                                <option value="accessories">Accessories</option>
+                                <option value="home">Home & Decor</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productPrice">Price ($)</label>
+                            <input type="number" id="productPrice" step="0.01" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productDescription">Description</label>
+                            <textarea id="productDescription" placeholder="Product description..." required></textarea>
+                        </div>
+
+                        <button type="button" class="btn" onclick="addProduct()">Add Product</button>
+                        <button type="button" class="btn btn-secondary" onclick="clearForm('productForm')">Clear</button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="preview-section">
+                        <h3 class="preview-title">Current Products</h3>
+                        <div id="productsPreview">
+                            <div style="color: #666; font-style: italic;">No products added yet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h3 class="preview-title">Generated JSON Data</h3>
+                <div class="json-output" id="productsJSON">[]</div>
+                <button class="btn" onclick="downloadJSON('products')" style="margin-top: 1rem;">Download products.json</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data storage
+        const data = {
+            stories: [],
+            photographers: [],
+            events: [],
+            products: []
+        };
+
+        // Tab switching
+        function switchTab(tabName) {
+            // Update nav tabs
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(tabName + 'Section').classList.add('active');
+        }
+
+        // Generate unique ID
+        function generateId() {
+            return 'item_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        // Add story
+        function addStory() {
+            const story = {
+                id: generateId(),
+                title: document.getElementById('storyTitle').value,
+                category: document.getElementById('storyCategory').value,
+                location: document.getElementById('storyLocation').value,
+                date: document.getElementById('storyDate').value,
+                excerpt: document.getElementById('storyExcerpt').value,
+                imageCaption: document.getElementById('storyImage').value,
+                createdAt: new Date().toISOString()
+            };
+
+            data.stories.push(story);
+            updatePreview('stories');
+            clearForm('storyForm');
+        }
+
+        // Add photographer
+        function addPhotographer() {
+            const photographer = {
+                id: generateId(),
+                name: document.getElementById('photographerName').value,
+                location: document.getElementById('photographerLocation').value,
+                specialty: document.getElementById('photographerSpecialty').value,
+                bio: document.getElementById('photographerBio').value,
+                category: document.getElementById('photographerCategory').value,
+                createdAt: new Date().toISOString()
+            };
+
+            data.photographers.push(photographer);
+            updatePreview('photographers');
+            clearForm('photographerForm');
+        }
+
+        // Add event
+        function addEvent() {
+            const event = {
+                id: generateId(),
+                title: document.getElementById('eventTitle').value,
+                type: document.getElementById('eventType').value,
+                location: document.getElementById('eventLocation').value,
+                date: document.getElementById('eventDate').value,
+                time: document.getElementById('eventTime').value,
+                description: document.getElementById('eventDescription').value,
+                featured: false,
+                createdAt: new Date().toISOString()
+            };
+
+            data.events.push(event);
+            updatePreview('events');
+            clearForm('eventForm');
+        }
+
+        // Add product
+        function addProduct() {
+            const product = {
+                id: generateId(),
+                name: document.getElementById('productName').value,
+                category: document.getElementById('productCategory').value,
+                price: parseFloat(document.getElementById('productPrice').value),
+                description: document.getElementById('productDescription').value,
+                createdAt: new Date().toISOString()
+            };
+
+            data.products.push(product);
+            updatePreview('products');
+            clearForm('productForm');
+        }
+
+        // Update preview
+        function updatePreview(type) {
+            const previewElement = document.getElementById(type + 'Preview');
+            const jsonElement = document.getElementById(type + 'JSON');
+
+            if (data[type].length === 0) {
+                previewElement.innerHTML = '<div style="color: #666; font-style: italic;">No ' + type + ' added yet</div>';
+            } else {
+                let html = '';
+                data[type].forEach((item, index) => {
+                    html += `
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div>
+                                    <div class="item-title">${item.title || item.name}</div>
+                                    <div class="item-meta">${item.location || item.category} • ${new Date(item.createdAt).toLocaleDateString()}</div>
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn btn-danger" onclick="removeItem('${type}', ${index})">Remove</button>
+                                </div>
+                            </div>
+                            ${item.excerpt || item.description || item.bio ? `<p style="color: #666; margin-top: 0.5rem;">${item.excerpt || item.description || item.bio}</p>` : ''}
+                        </div>
+                    `;
+                });
+                previewElement.innerHTML = html;
+            }
+
+            // Update JSON
+            jsonElement.textContent = JSON.stringify(data[type], null, 2);
+        }
+
+        // Remove item
+        function removeItem(type, index) {
+            if (confirm('Are you sure you want to remove this item?')) {
+                data[type].splice(index, 1);
+                updatePreview(type);
+            }
+        }
+
+        // Clear form
+        function clearForm(formId) {
+            document.getElementById(formId).reset();
+        }
+
+        // Download JSON
+        function downloadJSON(type) {
+            const jsonData = JSON.stringify(data[type], null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = type + '.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Initialize previews
+        Object.keys(data).forEach(type => {
+            updatePreview(type);
+        });
+    </script>
+</body>
+</html>

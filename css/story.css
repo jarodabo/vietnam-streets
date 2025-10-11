@@ -1,0 +1,697 @@
+/* ================================================
+   STORY PAGE STYLES
+   Vietnam Streets - Heritage Story Template
+   ================================================ */
+
+/* Story Page Layout */
+.story-page {
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+/* ================================================
+   HERO SECTION
+   ================================================ */
+.story-hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: flex-end;
+    background: #000;
+    overflow: hidden;
+}
+
+.story-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.story-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.story-hero-image img.loaded,
+.story-hero-image img[src] {
+    opacity: 0.7;
+}
+
+.story-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+    color: #ffffff;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+}
+
+.story-breadcrumb {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.story-breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.story-breadcrumb a:hover {
+    opacity: 0.7;
+}
+
+.story-breadcrumb span {
+    margin: 0 0.5rem;
+    opacity: 0.6;
+}
+
+.story-category-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.story-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-family: 'Lora', serif;
+}
+
+.story-hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    max-width: 800px;
+}
+
+/* Meta Bar */
+.story-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.story-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.story-meta-item .icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* ================================================
+   STORY CONTENT
+   ================================================ */
+.story-content {
+    padding: 4rem 2rem;
+    background: #ffffff;
+}
+
+.story-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Introduction */
+.story-introduction {
+    margin-bottom: 3rem;
+}
+
+.story-intro-text {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #333;
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+
+/* Body Content */
+.story-body {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.story-body p {
+    margin-bottom: 1.5rem;
+}
+
+.story-body p:last-of-type {
+    margin-bottom: 0;
+}
+
+.story-conclusion {
+    font-weight: 500;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Images */
+.story-image {
+    margin: 3rem 0;
+    width: 100%;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.story-image img.loaded,
+.story-image img[src] {
+    opacity: 1;
+}
+
+.story-image-wide {
+    margin-left: -10%;
+    margin-right: -10%;
+    width: 120%;
+    max-width: 1200px;
+}
+
+.story-image figcaption {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Quotes */
+.story-quote {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+    position: relative;
+}
+
+.story-quote p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.story-quote cite {
+    display: block;
+    font-size: 0.875rem;
+    font-style: normal;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Tags */
+.story-tags {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================================================
+   PHOTOGRAPHER INFO
+   ================================================ */
+.photographer-info {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.photographer-avatar {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.photographer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photographer-details {
+    flex: 1;
+}
+
+.photographer-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.photographer-bio {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.photographer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.photographer-links a {
+    font-size: 0.875rem;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.photographer-links a:hover {
+    color: #764ba2;
+}
+
+/* ================================================
+   SHARE SECTION
+   ================================================ */
+.story-share {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.story-share h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.share-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.share-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ================================================
+   RELATED STORIES
+   ================================================ */
+.related-stories {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.related-stories .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.related-stories .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: #222;
+}
+
+.related-stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.story-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.story-image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 66.67%; /* 3:2 aspect ratio */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+}
+
+.story-image-container img,
+.story-image-container .image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-info {
+    padding: 1.5rem;
+}
+
+.story-category-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #667eea;
+    color: white;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.story-info .story-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #222;
+    line-height: 1.3;
+}
+
+.story-excerpt {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.story-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.story-link:hover {
+    color: #764ba2;
+}
+
+/* ================================================
+   LIGHTBOX (Optional)
+   ================================================ */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    cursor: pointer;
+}
+
+.lightbox-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background: white;
+    color: black;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+@media (max-width: 768px) {
+    .story-hero-title {
+        font-size: 2rem;
+    }
+
+    .story-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .story-intro-text {
+        font-size: 1.25rem;
+    }
+
+    .story-body {
+        font-size: 1rem;
+    }
+
+    .story-quote p {
+        font-size: 1.25rem;
+    }
+
+    .story-image-wide {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+    }
+
+    .photographer-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photographer-avatar {
+        margin: 0 auto;
+    }
+
+    .photographer-links {
+        justify-content: center;
+    }
+
+    .story-meta-bar {
+        gap: 1rem;
+    }
+
+    .story-meta-item {
+        font-size: 0.8rem;
+    }
+
+    .related-stories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-hero {
+        min-height: 70vh;
+    }
+
+    .story-hero-content {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .story-hero-title {
+        font-size: 1.75rem;
+    }
+
+    .story-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .share-buttons {
+        flex-direction: column;
+    }
+
+    .share-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+@media print {
+    .header,
+    .footer,
+    .story-share,
+    .related-stories,
+    .photographer-links {
+        display: none;
+    }
+
+    .story-hero {
+        min-height: auto;
+        page-break-after: always;
+    }
+
+    .story-image {
+        page-break-inside: avoid;
+    }
+
+    .story-content {
+        padding: 1rem;
+    }
+}
+
+/* ================================================
+   ANIMATIONS
+   ================================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.story-hero-content > * {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.story-breadcrumb {
+    animation-delay: 0.1s;
+}
+
+.story-category-badge {
+    animation-delay: 0.2s;
+}
+
+.story-hero-title {
+    animation-delay: 0.3s;
+}
+
+.story-hero-subtitle {
+    animation-delay: 0.4s;
+}
+
+.story-meta-bar {
+    animation-delay: 0.5s;
+}
+
+/* Placeholder gradients for missing images */
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.image-placeholder::before {
+    content: attr(data-caption);
+}

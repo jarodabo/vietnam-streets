@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work With Us — Vietnam Streets</title>
+    <meta name="description" content="Join Vietnam Streets in documenting Vietnamese culture. Collaborate as a photographer, storyteller, volunteer, or partner to preserve and celebrate heritage.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-link">Vietnam Streets</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="stories.html">Stories</a>
+                    <a href="photographers.html">Photographers</a>
+                    <a href="learn.html">Learn</a>
+                    <a href="store.html">Store</a>
+                    <a href="prints.html">Fine Prints</a>
+                    <a href="events.html">Cultural Events</a>
+                    <a href="diaspora.html">Diaspora Stories</a>
+                    <a href="collaborate.html" class="active">Work With Us</a>
+                </div>
+                <div class="nav-right">
+                    <a href="search.html" class="nav-link">Search</a>
+                    <a href="connect.html" class="nav-link">Connect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Work With Us</h1>
+                <p class="page-subtitle">Join our mission to document, preserve, and celebrate Vietnamese culture through collaborative storytelling, photography, and community engagement.</p>
+            </div>
+        </section>
+
+        <section class="collaboration-opportunities">
+            <div class="container">
+                <div class="opportunities-grid">
+
+                    <div class="opportunity-card observe" data-type="photography">
+                        <div class="opportunity-image">
+                            <div class="image-placeholder" data-caption="Photographer documenting Vietnamese street life"></div>
+                        </div>
+                        <div class="opportunity-content">
+                            <h3 class="opportunity-title">Photography Contributors</h3>
+                            <p class="opportunity-description">Document Vietnamese culture through powerful visual storytelling. We welcome both emerging and established photographers.</p>
+                            <a href="#photography-form" class="opportunity-link">Apply as Photographer</a>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-card observe" data-type="storytelling">
+                        <div class="opportunity-image">
+                            <div class="image-placeholder" data-caption="Writer interviewing Vietnamese elder for oral history"></div>
+                        </div>
+                        <div class="opportunity-content">
+                            <h3 class="opportunity-title">Story Contributors</h3>
+                            <p class="opportunity-description">Share personal narratives, family histories, and cultural insights that preserve Vietnamese heritage for future generations.</p>
+                            <a href="#story-form" class="opportunity-link">Submit Your Story</a>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-card observe" data-type="events">
+                        <div class="opportunity-image">
+                            <div class="image-placeholder" data-caption="Vietnamese cultural event with community gathering"></div>
+                        </div>
+                        <div class="opportunity-content">
+                            <h3 class="opportunity-title">Event Partners</h3>
+                            <p class="opportunity-description">Collaborate on cultural events, workshops, and exhibitions that bring Vietnamese communities together worldwide.</p>
+                            <a href="#event-form" class="opportunity-link">Propose an Event</a>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-card observe" data-type="volunteer">
+                        <div class="opportunity-image">
+                            <div class="image-placeholder" data-caption="Volunteers working together on community project"></div>
+                        </div>
+                        <div class="opportunity-content">
+                            <h3 class="opportunity-title">Community Volunteers</h3>
+                            <p class="opportunity-description">Support our mission through translation, research, community outreach, and administrative assistance.</p>
+                            <a href="#volunteer-form" class="opportunity-link">Join as Volunteer</a>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-card observe" data-type="business">
+                        <div class="opportunity-image">
+                            <div class="image-placeholder" data-caption="Corporate partnership meeting with cultural organization"></div>
+                        </div>
+                        <div class="opportunity-content">
+                            <h3 class="opportunity-title">Corporate Partners</h3>
+                            <p class="opportunity-description">Partner with us to support cultural preservation while connecting with Vietnamese communities worldwide.</p>
+                            <a href="#partnership-form" class="opportunity-link">Explore Partnership</a>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-card observe" data-type="education">
+                        <div class="opportunity-image">
+                            <div class="image-placeholder" data-caption="Students engaged in Vietnamese cultural research"></div>
+                        </div>
+                        <div class="opportunity-content">
+                            <h3 class="opportunity-title">Educational Institutions</h3>
+                            <p class="opportunity-description">Collaborate on research projects, student exchanges, and educational programs focused on Vietnamese studies.</p>
+                            <a href="#education-form" class="opportunity-link">Academic Partnership</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="application-forms">
+            <div class="section-header">
+                <h2 class="section-title">Get Started</h2>
+                <p class="section-subtitle">Choose your collaboration path and begin your journey with us</p>
+            </div>
+
+            <div class="container">
+                <div class="forms-container">
+
+                    <div class="form-section observe" id="photography-form">
+                        <div class="form-header">
+                            <h3 class="form-title">Photography Application</h3>
+                            <p class="form-subtitle">Join our community of visual storytellers</p>
+                        </div>
+                        <form class="collaboration-form">
+                            <div class="form-group">
+                                <input type="text" id="photo-name" placeholder=" " required>
+                                <label for="photo-name">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="photo-email" placeholder=" " required>
+                                <label for="photo-email">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="photo-location" placeholder=" ">
+                                <label for="photo-location">Location</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="photo-experience">
+                                    <option value="">Select Experience Level</option>
+                                    <option value="emerging">Emerging (0-2 years)</option>
+                                    <option value="intermediate">Intermediate (3-7 years)</option>
+                                    <option value="professional">Professional (8+ years)</option>
+                                </select>
+                                <label for="photo-experience">Photography Experience</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="url" id="photo-portfolio" placeholder=" ">
+                                <label for="photo-portfolio">Portfolio URL</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="photo-interest" rows="4" placeholder=" "></textarea>
+                                <label for="photo-interest">What aspects of Vietnamese culture do you want to document?</label>
+                            </div>
+                            <button type="submit" class="form-submit-btn">Submit Application →</button>
+                        </form>
+                    </div>
+
+                    <div class="form-section observe" id="story-form">
+                        <div class="form-header">
+                            <h3 class="form-title">Story Submission</h3>
+                            <p class="form-subtitle">Share your Vietnamese heritage story</p>
+                        </div>
+                        <form class="collaboration-form">
+                            <div class="form-group">
+                                <input type="text" id="story-name" placeholder=" " required>
+                                <label for="story-name">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="story-email" placeholder=" " required>
+                                <label for="story-email">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="story-title" placeholder=" ">
+                                <label for="story-title">Story Title</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="story-type">
+                                    <option value="">Select Story Type</option>
+                                    <option value="personal">Personal/Family History</option>
+                                    <option value="community">Community Story</option>
+                                    <option value="cultural">Cultural Tradition</option>
+                                    <option value="diaspora">Diaspora Experience</option>
+                                    <option value="historical">Historical Account</option>
+                                </select>
+                                <label for="story-type">Story Type</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="story-summary" rows="5" placeholder=" "></textarea>
+                                <label for="story-summary">Brief summary of your story (200-300 words)</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="story-connection" rows="3" placeholder=" "></textarea>
+                                <label for="story-connection">How does this story connect to Vietnamese culture?</label>
+                            </div>
+                            <button type="submit" class="form-submit-btn">Submit Story →</button>
+                        </form>
+                    </div>
+
+                    <div class="form-section observe" id="general-inquiry">
+                        <div class="form-header">
+                            <h3 class="form-title">General Inquiry</h3>
+                            <p class="form-subtitle">Have questions? We'd love to hear from you</p>
+                        </div>
+                        <form class="collaboration-form">
+                            <div class="form-group">
+                                <input type="text" id="inquiry-name" placeholder=" " required>
+                                <label for="inquiry-name">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="inquiry-email" placeholder=" " required>
+                                <label for="inquiry-email">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="inquiry-subject" placeholder=" ">
+                                <label for="inquiry-subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="inquiry-collaboration">
+                                    <option value="">Select Primary Interest</option>
+                                    <option value="photography">Photography</option>
+                                    <option value="storytelling">Storytelling</option>
+                                    <option value="events">Event Partnership</option>
+                                    <option value="volunteer">Volunteer Work</option>
+                                    <option value="corporate">Corporate Partnership</option>
+                                    <option value="education">Educational Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label for="inquiry-collaboration">Collaboration Interest</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="inquiry-message" rows="6" placeholder=" "></textarea>
+                                <label for="inquiry-message">Tell us about your interest in collaborating</label>
+                            </div>
+                            <button type="submit" class="form-submit-btn">Send Message →</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="collaboration-values">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Collaboration Values</h2>
+                    <p class="section-subtitle">Built on principles of cultural respect, authentic storytelling, and community empowerment</p>
+                </div>
+
+                <div class="values-grid">
+                    <div class="values-card observe">
+                        <h3>Cultural Authenticity</h3>
+                        <p>We honor Vietnamese voices and experiences through respectful, accurate documentation that celebrates both tradition and contemporary identity.</p>
+                    </div>
+                    <div class="values-card observe">
+                        <h3>Community-Centered</h3>
+                        <p>Our collaborative approach ensures stories are told by and for Vietnamese communities worldwide.</p>
+                    </div>
+                    <div class="values-card observe">
+                        <h3>Inclusive Perspectives</h3>
+                        <p>We embrace diverse Vietnamese experiences across generations, geographies, and backgrounds.</p>
+                    </div>
+                    <div class="values-card observe">
+                        <h3>Ethical Practices</h3>
+                        <p>All documentation follows ethical guidelines that protect cultural integrity and participant dignity.</p>
+                    </div>
+                    <div class="values-card observe">
+                        <h3>Sustainable Preservation</h3>
+                        <p>We create lasting archives that preserve culture for future generations while remaining accessible today.</p>
+                    </div>
+                    <div class="values-card observe">
+                        <h3>Global Solidarity</h3>
+                        <p>We connect Vietnamese communities worldwide through shared stories and cultural celebration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@vietnamstreets.com">Email</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Submit Story</a></li>
+                    <li><a href="#">Host Event</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vietnam Streets. Documenting culture, preserving heritage.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/collaborate.js"></script>
+</body>
+</html>

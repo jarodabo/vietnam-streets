@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Streets Embed Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+
+        .demo-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .demo-header h1 {
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        .demo-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .demo-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .demo-section h2 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 0.5rem;
+        }
+
+        .demo-section h3 {
+            color: #333;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        .embed-demo {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f8f8f8;
+            border-radius: 6px;
+            border: 2px dashed #ddd;
+        }
+
+        .embed-demo h4 {
+            margin-top: 0;
+            color: #1a1a1a;
+            font-size: 1rem;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .grid-demo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .copy-btn {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .copy-btn:hover {
+            background: #333;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .grid-demo {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <h1>Vietnam Streets Embed Widgets</h1>
+        <p>Showcase Vietnamese cultural content on your website with these easy-to-use embed widgets</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>🚀 Quick Start</h2>
+        <p>Add the Vietnam Streets embed script to your website and start showcasing Vietnamese cultural content:</p>
+
+        <div class="code-block">
+&lt;!-- Add this script tag to your HTML --&gt;
+&lt;script src="https://vietnamstreets.com/embeds/vietnam-streets-embed.js"&gt;&lt;/script&gt;
+
+&lt;!-- Then add embed containers anywhere on your page --&gt;
+&lt;div data-vietnam-streets-embed="story"&gt;&lt;/div&gt;</div>
+
+        <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Code</button>
+    </div>
+
+    <div class="demo-section">
+        <h2>📖 Story Embed</h2>
+        <p>Showcase a single Vietnamese cultural story with rich media and context.</p>
+
+        <div class="embed-demo">
+            <h4>Live Demo:</h4>
+            <div data-vietnam-streets-embed="story" data-width="100%"></div>
+        </div>
+
+        <h3>Implementation Code:</h3>
+        <div class="code-block">
+&lt;div data-vietnam-streets-embed="story"
+     data-width="100%"
+     data-story-id="latest"&gt;&lt;/div&gt;</div>
+
+        <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Code</button>
+
+        <h3>Available Options:</h3>
+        <ul>
+            <li><code>data-width</code> - Width of the embed (e.g., "100%", "400px")</li>
+            <li><code>data-height</code> - Height of the embed (optional)</li>
+            <li><code>data-story-id</code> - Specific story ID or "latest" for most recent</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>📚 Stories Grid Embed</h2>
+        <p>Display multiple Vietnamese stories in a clean grid layout.</p>
+
+        <div class="embed-demo">
+            <h4>Live Demo - 2 Column Grid:</h4>
+            <div data-vietnam-streets-embed="stories-grid"
+                 data-width="100%"
+                 data-columns="2"
+                 data-limit="4"></div>
+        </div>
+
+        <h3>Implementation Code:</h3>
+        <div class="code-block">
+&lt;div data-vietnam-streets-embed="stories-grid"
+     data-width="100%"
+     data-columns="2"
+     data-limit="4"&gt;&lt;/div&gt;</div>
+
+        <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Code</button>
+
+        <div class="embed-demo">
+            <h4>Live Demo - 3 Column Grid:</h4>
+            <div data-vietnam-streets-embed="stories-grid"
+                 data-width="100%"
+                 data-columns="3"
+                 data-limit="3"></div>
+        </div>
+
+        <h3>Available Options:</h3>
+        <ul>
+            <li><code>data-columns</code> - Number of columns (2 or 3)</li>
+            <li><code>data-limit</code> - Number of stories to display</li>
+            <li><code>data-category</code> - Filter by category (optional)</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>📸 Photographer Showcase</h2>
+        <p>Highlight Vietnamese photographers and their work.</p>
+
+        <div class="embed-demo">
+            <h4>Live Demo:</h4>
+            <div data-vietnam-streets-embed="photographer" data-width="100%"></div>
+        </div>
+
+        <h3>Implementation Code:</h3>
+        <div class="code-block">
+&lt;div data-vietnam-streets-embed="photographer"
+     data-width="100%"
+     data-limit="3"&gt;&lt;/div&gt;</div>
+
+        <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Code</button>
+    </div>
+
+    <div class="demo-section">
+        <h2>🎪 Events Calendar</h2>
+        <p>Show upcoming Vietnamese cultural events and workshops.</p>
+
+        <div class="embed-demo">
+            <h4>Live Demo:</h4>
+            <div data-vietnam-streets-embed="events" data-width="100%" data-limit="3"></div>
+        </div>
+
+        <h3>Implementation Code:</h3>
+        <div class="code-block">
+&lt;div data-vietnam-streets-embed="events"
+     data-width="100%"
+     data-limit="3"&gt;&lt;/div&gt;</div>
+
+        <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Code</button>
+    </div>
+
+    <div class="demo-section">
+        <h2>🎨 Customization</h2>
+
+        <h3>Responsive Design</h3>
+        <p>All embeds are fully responsive and will adapt to different screen sizes automatically.</p>
+
+        <h3>Custom Styling</h3>
+        <p>You can override the default styles by targeting the embed classes in your CSS:</p>
+
+        <div class="code-block">
+/* Customize embed colors */
+.vs-embed-header {
+    background: #your-brand-color !important;
+}
+
+/* Customize fonts */
+.vs-embed {
+    font-family: your-font-family !important;
+}</div>
+
+        <h3>Size Options</h3>
+        <div class="grid-demo">
+            <div class="embed-demo">
+                <h4>Small Embed (300px):</h4>
+                <div data-vietnam-streets-embed="story" data-width="300px"></div>
+            </div>
+
+            <div class="embed-demo">
+                <h4>Medium Embed (500px):</h4>
+                <div data-vietnam-streets-embed="events" data-width="500px" data-limit="2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>🔧 Advanced Usage</h2>
+
+        <h3>JavaScript API</h3>
+        <p>Create embeds programmatically using JavaScript:</p>
+
+        <div class="code-block">
+// Create a story embed
+const storyEmbed = VietnamStreets.createStoryEmbed({
+    width: '100%',
+    storyId: 'story-1'  // Use specific story IDs
+});
+
+// Create a stories grid
+const gridEmbed = VietnamStreets.createStoriesGridEmbed({
+    width: '100%',
+    columns: 3,
+    limit: 6,
+    category: 'heritage'  // Filter by category
+});
+
+// Create photographer showcase
+const photoEmbed = VietnamStreets.createPhotographerEmbed({
+    width: '500px',
+    limit: 3
+});
+
+// Create events calendar
+const eventsEmbed = VietnamStreets.createEventsEmbed({
+    width: '100%',
+    limit: 3
+});
+
+// Add to your page
+document.getElementById('my-container').appendChild(storyEmbed);</div>
+
+        <h3>Available Configuration Options</h3>
+        <p>All embed types support these configuration options:</p>
+
+        <div class="code-block">
+{
+    width: '100%',           // CSS width value
+    height: 'auto',          // CSS height value (optional)
+
+    // Story embed specific
+    storyId: 'latest',       // 'latest', 'story-1', 'story-2', etc.
+
+    // Grid embed specific
+    columns: 3,              // 2 or 3 columns
+    limit: 6,                // Number of items to show
+    category: 'heritage',    // Filter by category (optional)
+
+    // Photographer embed specific
+    limit: 3,                // Number of photographers
+
+    // Events embed specific
+    limit: 3                 // Number of events
+}</div>
+
+        <h3>Event Callbacks</h3>
+        <p>Listen for embed events:</p>
+
+        <div class="code-block">
+// Listen for embed ready events
+document.addEventListener('vietnam-streets-embed-ready', function(e) {
+    console.log('Embed loaded:', e.detail);
+});
+
+// Check if VietnamStreets is loaded
+if (window.VietnamStreets) {
+    console.log('Vietnam Streets embed version:', VietnamStreets.version);
+}</div>
+
+        <h3>Data Sources</h3>
+        <p>The embed system loads data from multiple sources:</p>
+        <ul>
+            <li><strong>Local JSON files:</strong> ../data/stories.json, ../data/photographers.json, ../data/events.json</li>
+            <li><strong>API fallback:</strong> vietnamstreets.com/api/* endpoints</li>
+            <li><strong>Demo data:</strong> Hardcoded fallback for offline demos</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>📱 Mobile Optimization</h2>
+        <p>All Vietnam Streets embeds are optimized for mobile devices:</p>
+        <ul>
+            <li>Responsive grid layouts</li>
+            <li>Touch-friendly interactions</li>
+            <li>Optimized font sizes</li>
+            <li>Compressed images</li>
+        </ul>
+
+        <div class="embed-demo">
+            <h4>Mobile-Optimized Stories Grid:</h4>
+            <div data-vietnam-streets-embed="stories-grid"
+                 data-width="100%"
+                 data-columns="1"
+                 data-limit="2"></div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>🔧 Troubleshooting</h2>
+
+        <h3>Common Issues</h3>
+        <div style="margin: 1rem 0;">
+            <h4>Embed not showing up:</h4>
+            <ul>
+                <li>Check that the script tag is properly included in your HTML head</li>
+                <li>Verify the embed div has the correct data attributes</li>
+                <li>Check browser console for JavaScript errors</li>
+            </ul>
+        </div>
+
+        <div style="margin: 1rem 0;">
+            <h4>Data not loading:</h4>
+            <ul>
+                <li>Check network tab for failed API requests</li>
+                <li>Verify CORS settings if serving from different domain</li>
+                <li>Fallback demo data should still display</li>
+            </ul>
+        </div>
+
+        <div style="margin: 1rem 0;">
+            <h4>Styling issues:</h4>
+            <ul>
+                <li>Use CSS specificity to override embed styles</li>
+                <li>Add !important to ensure your styles take precedence</li>
+                <li>Check for conflicting CSS that might affect layout</li>
+            </ul>
+        </div>
+
+        <h3>Browser Support</h3>
+        <p>Vietnam Streets embeds work in all modern browsers:</p>
+        <ul>
+            <li>Chrome 60+</li>
+            <li>Firefox 55+</li>
+            <li>Safari 12+</li>
+            <li>Edge 79+</li>
+        </ul>
+
+        <h3>Performance</h3>
+        <p>The embed system is designed for performance:</p>
+        <ul>
+            <li>Lightweight JavaScript (~15KB gzipped)</li>
+            <li>CSS injected only once per page</li>
+            <li>Lazy loading for images and content</li>
+            <li>Graceful fallbacks for offline scenarios</li>
+        </ul>
+    </div>
+
+    <!-- Load the embed script -->
+    <script src="vietnam-streets-embed.js"></script>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text.trim()).then(function() {
+                // Visual feedback
+                event.target.textContent = 'Copied!';
+                event.target.style.background = '#4CAF50';
+
+                setTimeout(() => {
+                    event.target.textContent = 'Copy Code';
+                    event.target.style.background = '#1a1a1a';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

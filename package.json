@@ -1,0 +1,14 @@
+{
+  "name": "vietnam-streets-landing",
+  "version": "1.0.0",
+  "description": "Vietnam Streets landing page with Instagram and Luma event feeds",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static build - files ready for deployment'",
+    "deploy": "echo 'Deploy to static hosting'"
+  },
+  "keywords": ["vietnam", "streets", "events", "static", "landing-page"],
+  "author": "Vietnam Streets",
+  "license": "MIT"
+}

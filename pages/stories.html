@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories — Vietnam Streets</title>
+    <meta name="description" content="Visual stories documenting Vietnamese culture, heritage, and modern life through photography and narrative.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-link">Vietnam Streets</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="stories.html" class="active">Stories</a>
+                    <a href="photographers.html">Photographers</a>
+                    <a href="learn.html">Learn</a>
+                    <a href="store.html">Store</a>
+                    <a href="prints.html">Fine Prints</a>
+                    <a href="events.html">Cultural Events</a>
+                    <a href="diaspora.html">Diaspora Stories</a>
+                    <a href="collaborate.html">Work With Us</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#search" class="nav-link">Search</a>
+                    <a href="#connect" class="nav-link">Connect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Stories</h1>
+                <p class="page-subtitle">Visual narratives documenting Vietnamese culture, heritage, and the evolution of community life across generations.</p>
+            </div>
+        </section>
+
+        <section class="stories-filter">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Stories</button>
+                    <button class="filter-btn" data-filter="heritage">Heritage</button>
+                    <button class="filter-btn" data-filter="community">Community</button>
+                    <button class="filter-btn" data-filter="diaspora">Diaspora</button>
+                    <button class="filter-btn" data-filter="crafts">Traditional Crafts</button>
+                    <button class="filter-btn" data-filter="food">Food Culture</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="stories-grid-page">
+            <div class="container">
+                <div class="stories-masonry" id="storiesGrid">
+
+                    <article class="story-item observe" data-category="heritage">
+                        <div class="story-image-container">
+                            <div class="image-placeholder" data-caption="Elderly woman preparing traditional bánh chưng for Tết celebration in rural Vietnam"></div>
+                            <div class="story-overlay">
+                                <span class="story-category-tag">Heritage</span>
+                            </div>
+                        </div>
+                        <div class="story-info">
+                            <h3 class="story-title">The Art of Tết Preparation</h3>
+                            <p class="story-excerpt">Three generations of women gather in a rural village to prepare traditional foods for Vietnamese New Year, maintaining customs passed down through centuries of celebration.</p>
+                            <div class="story-meta">
+                                <span class="story-location">Mekong Delta, Vietnam</span>
+                                <span class="story-date">January 2025</span>
+                            </div>
+                            <a href="#" class="story-link">View Story</a>
+                        </div>
+                    </article>
+
+                    <article class="story-item observe" data-category="diaspora">
+                        <div class="story-image-container">
+                            <div class="image-placeholder" data-caption="Vietnamese-American family maintaining traditions in their California home"></div>
+                            <div class="story-overlay">
+                                <span class="story-category-tag">Diaspora</span>
+                            </div>
+                        </div>
+                        <div class="story-info">
+                            <h3 class="story-title">Between Two Worlds</h3>
+                            <p class="story-excerpt">A Vietnamese-American family navigates cultural identity, preserving ancestral traditions while embracing American life in suburban California.</p>
+                            <div class="story-meta">
+                                <span class="story-location">San Jose, California</span>
+                                <span class="story-date">December 2024</span>
+                            </div>
+                            <a href="#" class="story-link">View Story</a>
+                        </div>
+                    </article>
+
+                    <article class="story-item observe" data-category="crafts">
+                        <div class="story-image-container">
+                            <div class="image-placeholder" data-caption="Master craftsman creating traditional ao dai in Hoi An workshop"></div>
+                            <div class="story-overlay">
+                                <span class="story-category-tag">Traditional Crafts</span>
+                            </div>
+                        </div>
+                        <div class="story-info">
+                            <h3 class="story-title">Threads of Elegance</h3>
+                            <p class="story-excerpt">In the ancient streets of Hoi An, master tailors continue the delicate art of ao dai creation, preserving techniques refined over generations.</p>
+                            <div class="story-meta">
+                                <span class="story-location">Hoi An, Vietnam</span>
+                                <span class="story-date">November 2024</span>
+                            </div>
+                            <a href="#" class="story-link">View Story</a>
+                        </div>
+                    </article>
+
+                    <article class="story-item observe" data-category="food">
+                        <div class="story-image-container">
+                            <div class="image-placeholder" data-caption="Street vendor preparing traditional pho in early morning Hanoi"></div>
+                            <div class="story-overlay">
+                                <span class="story-category-tag">Food Culture</span>
+                            </div>
+                        </div>
+                        <div class="story-info">
+                            <h3 class="story-title">Dawn of Flavor</h3>
+                            <p class="story-excerpt">Before sunrise in Old Quarter Hanoi, pho vendors begin their daily ritual, creating the aromatic broth that defines Vietnamese culinary identity.</p>
+                            <div class="story-meta">
+                                <span class="story-location">Hanoi, Vietnam</span>
+                                <span class="story-date">October 2024</span>
+                            </div>
+                            <a href="#" class="story-link">View Story</a>
+                        </div>
+                    </article>
+
+                    <article class="story-item observe" data-category="community">
+                        <div class="story-image-container">
+                            <div class="image-placeholder" data-caption="Community gathering for Mid-Autumn Festival in Little Saigon"></div>
+                            <div class="story-overlay">
+                                <span class="story-category-tag">Community</span>
+                            </div>
+                        </div>
+                        <div class="story-info">
+                            <h3 class="story-title">Lanterns and Belonging</h3>
+                            <p class="story-excerpt">Little Saigon comes alive during Mid-Autumn Festival as three generations gather to celebrate traditions that bridge homeland and new country.</p>
+                            <div class="story-meta">
+                                <span class="story-location">Westminster, California</span>
+                                <span class="story-date">September 2024</span>
+                            </div>
+                            <a href="#" class="story-link">View Story</a>
+                        </div>
+                    </article>
+
+                    <article class="story-item observe" data-category="heritage">
+                        <div class="story-image-container">
+                            <div class="image-placeholder" data-caption="Traditional water puppet performance in rural Vietnamese village"></div>
+                            <div class="story-overlay">
+                                <span class="story-category-tag">Heritage</span>
+                            </div>
+                        </div>
+                        <div class="story-info">
+                            <h3 class="story-title">Voices from the Water</h3>
+                            <p class="story-excerpt">Ancient water puppet traditions continue in rural Vietnamese villages, where master puppeteers preserve centuries-old storytelling through dance and song.</p>
+                            <div class="story-meta">
+                                <span class="story-location">Red River Delta, Vietnam</span>
+                                <span class="story-date">August 2024</span>
+                            </div>
+                            <a href="#" class="story-link">View Story</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@vietnamstreets.com">Email</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Submit Story</a></li>
+                    <li><a href="#">Host Event</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vietnam Streets. Documenting culture, preserving heritage.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/stories.js"></script>
+</body>
+</html>

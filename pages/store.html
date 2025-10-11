@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store — Vietnam Streets</title>
+    <meta name="description" content="Shop authentic Vietnamese cultural products, photography books, prints, and artisan-crafted items celebrating Vietnamese heritage.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" class="logo-link">Vietnam Streets</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="stories.html">Stories</a>
+                    <a href="photographers.html">Photographers</a>
+                    <a href="learn.html">Learn</a>
+                    <a href="store.html" class="active">Store</a>
+                    <a href="prints.html">Fine Prints</a>
+                    <a href="events.html">Cultural Events</a>
+                    <a href="diaspora.html">Diaspora Stories</a>
+                    <a href="collaborate.html">Work With Us</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#search" class="nav-link">Search</a>
+                    <a href="#connect" class="nav-link">Connect</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Store</h1>
+                <p class="page-subtitle">Authentic Vietnamese cultural products, photography books, and artisan-crafted items celebrating heritage and contemporary culture.</p>
+            </div>
+        </section>
+
+        <section class="store-categories">
+            <div class="container">
+                <div class="categories-filter">
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">All Products</button>
+                        <button class="filter-btn" data-filter="books">Books</button>
+                        <button class="filter-btn" data-filter="prints">Prints</button>
+                        <button class="filter-btn" data-filter="apparel">Apparel</button>
+                        <button class="filter-btn" data-filter="accessories">Accessories</button>
+                        <button class="filter-btn" data-filter="home">Home & Decor</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Products</h2>
+                    <p class="section-subtitle">Curated selections celebrating Vietnamese culture</p>
+                </div>
+
+                <div class="featured-grid">
+
+                    <div class="featured-product observe">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Vietnam Streets Photography Book Volume One"></div>
+                            <div class="product-badge">New Release</div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Books</span>
+                            <h3 class="product-title">Vietnam Streets: Volume One</h3>
+                            <p class="product-description">A curated collection of contemporary Vietnamese photography documenting culture, community, and heritage across three continents.</p>
+                            <div class="product-specs">
+                                <span class="spec">Hardcover, 240 pages</span>
+                                <span class="spec">Premium paper</span>
+                                <span class="spec">Limited edition</span>
+                            </div>
+                            <div class="product-pricing">
+                                <span class="price">$85.00</span>
+                                <span class="shipping">Free shipping worldwide</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="featured-product observe">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Traditional Vietnamese ao dai in modern styling"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Apparel</span>
+                            <h3 class="product-title">Contemporary Ao Dai Collection</h3>
+                            <p class="product-description">Modern interpretations of the traditional ao dai, crafted by Vietnamese designers using heritage techniques and contemporary cuts.</p>
+                            <div class="product-specs">
+                                <span class="spec">Sustainable silk</span>
+                                <span class="spec">Custom tailoring</span>
+                                <span class="spec">Multiple colors</span>
+                            </div>
+                            <div class="product-pricing">
+                                <span class="price">$320.00</span>
+                                <span class="shipping">Made to order</span>
+                            </div>
+                            <button class="add-to-cart-btn">Customize & Order</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid-section">
+            <div class="container">
+                <div class="products-grid" id="productsGrid">
+
+                    <div class="product-card observe" data-category="books">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Vietnamese Heritage Cookbook cover"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Books</span>
+                            <h3 class="product-name">Heritage Recipes of Vietnam</h3>
+                            <p class="product-price">$42.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card observe" data-category="prints">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Limited edition Vietnamese street photography print"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Prints</span>
+                            <h3 class="product-name">Saigon Dawn Print Series</h3>
+                            <p class="product-price">$65.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card observe" data-category="accessories">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Handcrafted Vietnamese lacquerware jewelry box"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessories</span>
+                            <h3 class="product-name">Lacquer Jewelry Collection</h3>
+                            <p class="product-price">$125.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card observe" data-category="home">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Vietnamese ceramic tea set with traditional patterns"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Home & Decor</span>
+                            <h3 class="product-name">Ceramic Tea Ceremony Set</h3>
+                            <p class="product-price">$180.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card observe" data-category="apparel">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Vietnam Streets branded organic cotton t-shirt"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Apparel</span>
+                            <h3 class="product-name">Vietnam Streets Tee</h3>
+                            <p class="product-price">$35.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card observe" data-category="books">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Vietnamese poetry anthology in bilingual edition"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Books</span>
+                            <h3 class="product-name">Contemporary Vietnamese Poetry</h3>
+                            <p class="product-price">$28.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card observe" data-category="home">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Handwoven Vietnamese bamboo storage baskets"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Home & Decor</span>
+                            <h3 class="product-name">Bamboo Storage Collection</h3>
+                            <p class="product-price">$95.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card observe" data-category="accessories">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Vietnamese silk scarf with traditional motifs"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessories</span>
+                            <h3 class="product-name">Heritage Silk Scarves</h3>
+                            <p class="product-price">$75.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card observe" data-category="prints">
+                        <div class="product-image">
+                            <div class="image-placeholder" data-caption="Vietnamese temple architecture photography print"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Prints</span>
+                            <h3 class="product-name">Sacred Spaces Collection</h3>
+                            <p class="product-price">$55.00</p>
+                            <button class="quick-add-btn">Quick Add</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="store-info">
+            <div class="container">
+                <div class="info-grid">
+
+                    <div class="info-card observe">
+                        <h3 class="info-title">Worldwide Shipping</h3>
+                        <p class="info-description">Free shipping on orders over $75. Express delivery available to major cities.</p>
+                    </div>
+
+                    <div class="info-card observe">
+                        <h3 class="info-title">Artisan Partners</h3>
+                        <p class="info-description">Supporting Vietnamese artisans and cultural preservation through direct partnerships.</p>
+                    </div>
+
+                    <div class="info-card observe">
+                        <h3 class="info-title">Authentic Quality</h3>
+                        <p class="info-description">Every product is carefully curated to ensure cultural authenticity and premium quality.</p>
+                    </div>
+
+                    <div class="info-card observe">
+                        <h3 class="info-title">Cultural Impact</h3>
+                        <p class="info-description">25% of proceeds support Vietnamese cultural preservation and community projects.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@vietnamstreets.com">Email</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Submit Story</a></li>
+                    <li><a href="#">Host Event</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vietnam Streets. Documenting culture, preserving heritage.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/store.js"></script>
+</body>
+</html>
