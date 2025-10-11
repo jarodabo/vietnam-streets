@@ -4,5 +4,8 @@ nixPkgs = ["python3"]
 [phases.install]
 cmds = ["echo 'No dependencies to install'"]
 
+[phases.build]
+cmds = ["echo 'Static site - no build needed'"]
+
 [start]
 cmd = "python3 -m http.server $PORT"
