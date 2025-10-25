@@ -1,0 +1,201 @@
+/* Photography Communities Dashboard Styles */
+
+/* =====================================================
+   PLATFORM FILTER
+   ===================================================== */
+
+.platform-filter {
+    padding: var(--space-xl) 0;
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+    background: white;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.filter-btn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* =====================================================
+   COMMUNITIES SECTIONS
+   ===================================================== */
+
+.communities-section {
+    padding: var(--space-3xl) 0;
+    background: var(--color-bg);
+}
+
+.communities-section:nth-child(even) {
+    background: var(--color-bg-alt);
+}
+
+.communities-section.hidden {
+    display: none;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.communities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-xl);
+}
+
+/* =====================================================
+   COMMUNITY CARDS
+   ===================================================== */
+
+.community-card {
+    padding: var(--space-2xl);
+    background: white;
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.communities-section:nth-child(even) .community-card {
+    background: var(--color-bg);
+}
+
+.community-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.community-header {
+    margin-bottom: var(--space-lg);
+}
+
+.community-icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: var(--space-md);
+}
+
+.facebook-icon {
+    background: #1877F2;
+    color: white;
+}
+
+.instagram-icon {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    color: white;
+}
+
+.reddit-icon {
+    background: #FF4500;
+    color: white;
+}
+
+.community-name {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-normal);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.community-members {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+.community-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-lg);
+}
+
+.community-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    text-decoration: none;
+    transition: all var(--transition-base);
+}
+
+.community-link:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
+.observe {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.observe.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .communities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-tabs {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .community-card {
+        padding: var(--space-xl);
+    }
+
+    .communities-section {
+        padding: var(--space-2xl) 0;
+    }
+}

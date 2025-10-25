@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cultural Events — Vietnam Streets</title>
-    <meta name="description" content="Join Vietnamese cultural events, workshops, exhibitions, and community gatherings celebrating heritage and fostering connections worldwide.">
+    <title>Photography Communities — Vietnam Streets</title>
+    <meta name="description" content="Discover and join active street photography communities on Facebook, Instagram, and Reddit. Connect with photographers worldwide.">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/event-registration.css">
+    <link rel="stylesheet" href="../css/communities.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,8 +32,8 @@
                     <a href="collaborate.html">Work With Us</a>
                 </div>
                 <div class="nav-right">
-                    <a href="#search" class="nav-link">Search</a>
-                    <a href="#connect" class="nav-link">Connect</a>
+                    <a href="search.html" class="nav-link">Search</a>
+                    <a href="connect.html" class="nav-link">Connect</a>
                 </div>
             </div>
         </nav>
@@ -42,241 +42,185 @@
     <main class="main">
         <section class="page-hero">
             <div class="page-hero-content">
-                <h1 class="page-title">Cultural Events</h1>
-                <p class="page-subtitle">Join our global community in celebrating Vietnamese culture through workshops, exhibitions, festivals, and cultural gatherings.</p>
+                <h1 class="page-title">Photography Communities</h1>
+                <p class="page-subtitle">Curated list of active street photography groups and communities. Connect with photographers, share your work, and learn from others.</p>
             </div>
         </section>
 
-        <section class="events-filter">
+        <!-- Platform Filter -->
+        <section class="platform-filter">
             <div class="container">
                 <div class="filter-tabs">
-                    <button class="filter-btn active" data-filter="all">All Events</button>
-                    <button class="filter-btn" data-filter="workshops">Workshops</button>
-                    <button class="filter-btn" data-filter="exhibitions">Exhibitions</button>
-                    <button class="filter-btn" data-filter="festivals">Festivals</button>
-                    <button class="filter-btn" data-filter="talks">Talks & Panels</button>
-                    <button class="filter-btn" data-filter="community">Community</button>
+                    <button class="filter-btn active" data-platform="all">All Platforms</button>
+                    <button class="filter-btn" data-platform="facebook">Facebook</button>
+                    <button class="filter-btn" data-platform="instagram">Instagram</button>
+                    <button class="filter-btn" data-platform="reddit">Reddit</button>
                 </div>
             </div>
         </section>
 
-        <section class="featured-event">
+        <!-- Facebook Groups -->
+        <section class="communities-section" data-platform="facebook">
             <div class="container">
-                <div class="featured-event-content observe">
-                    <div class="featured-event-image">
-                        <div class="image-placeholder" data-caption="Vietnamese heritage photography workshop in San Francisco"></div>
-                        <div class="event-date-badge">
-                            <span class="month">Feb</span>
-                            <span class="day">15</span>
-                        </div>
-                    </div>
-                    <div class="featured-event-details">
-                        <span class="event-category">Workshop</span>
-                        <h2 class="event-title">Heritage Photography Workshop</h2>
-                        <div class="event-meta">
-                            <span class="event-location">San Francisco, CA</span>
-                            <span class="event-time">2:00 PM - 6:00 PM PST</span>
-                        </div>
-                        <p class="event-description">Learn documentary photography techniques while exploring Vietnamese cultural sites in San Francisco. Led by award-winning photographer Minh Nguyen, this hands-on workshop covers composition, storytelling, and cultural sensitivity in photography.</p>
+                <div class="section-header observe">
+                    <h2 class="section-title">Facebook Groups</h2>
+                    <p class="section-subtitle">Active groups with discussions, critiques, and community support</p>
+                </div>
 
-                        <div class="event-highlights">
-                            <h4>What You'll Learn</h4>
-                            <ul>
-                                <li>Documentary photography fundamentals</li>
-                                <li>Cultural storytelling through images</li>
-                                <li>Respectful approaches to community photography</li>
-                                <li>Post-processing techniques for cultural documentation</li>
-                            </ul>
+                <div class="communities-grid">
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon facebook-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </div>
+                            <h3 class="community-name">Street Photography</h3>
+                            <span class="community-members">145K members</span>
                         </div>
+                        <p class="community-description">The largest street photography community on Facebook. Daily photo shares, constructive critiques, and discussions about technique and ethics.</p>
+                        <a href="https://www.facebook.com/groups/streetphotography" class="community-link" target="_blank" rel="noopener noreferrer">Join Group</a>
+                    </article>
 
-                        <div class="event-details-grid">
-                            <div class="detail-item">
-                                <h5>Duration</h5>
-                                <p>4 hours</p>
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon facebook-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
                             </div>
-                            <div class="detail-item">
-                                <h5>Price</h5>
-                                <p>$85 (includes materials)</p>
-                            </div>
-                            <div class="detail-item">
-                                <h5>Skill Level</h5>
-                                <p>All levels welcome</p>
-                            </div>
-                            <div class="detail-item">
-                                <h5>Language</h5>
-                                <p>English & Vietnamese</p>
-                            </div>
+                            <h3 class="community-name">Leica Street Photography</h3>
+                            <span class="community-members">28K members</span>
                         </div>
+                        <p class="community-description">For Leica users and rangefinder enthusiasts. Share your street work, discuss gear, and connect with other Leica photographers.</p>
+                        <a href="https://www.facebook.com/groups/leicastreetphotography" class="community-link" target="_blank" rel="noopener noreferrer">Join Group</a>
+                    </article>
 
-                        <div class="event-actions">
-                            <button class="register-btn">Register Now</button>
-                            <a href="#" class="learn-more-link">Learn More</a>
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon facebook-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </div>
+                            <h3 class="community-name">Film Street Photography</h3>
+                            <span class="community-members">52K members</span>
                         </div>
-                    </div>
+                        <p class="community-description">Dedicated to film photography on the streets. Share your analog work, discuss film stocks, and embrace the slower, intentional process.</p>
+                        <a href="https://www.facebook.com/groups/filmstreetphotography" class="community-link" target="_blank" rel="noopener noreferrer">Join Group</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="upcoming-events">
+        <!-- Instagram Communities -->
+        <section class="communities-section" data-platform="instagram">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Upcoming Events</h2>
-                    <p class="section-subtitle">Mark your calendar for these cultural celebrations</p>
+                <div class="section-header observe">
+                    <h2 class="section-title">Instagram Communities</h2>
+                    <p class="section-subtitle">Follow these accounts for daily inspiration and community features</p>
                 </div>
 
-                <div class="events-grid" id="eventsGrid">
+                <div class="communities-grid">
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon instagram-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                            <h3 class="community-name">@streetphotographyinternational</h3>
+                            <span class="community-members">1.2M followers</span>
+                        </div>
+                        <p class="community-description">Daily features from street photographers worldwide. Tag your work for a chance to be featured. Active community in comments.</p>
+                        <a href="https://www.instagram.com/streetphotographyinternational" class="community-link" target="_blank" rel="noopener noreferrer">Follow</a>
+                    </article>
 
-                    <div class="event-card observe" data-category="exhibitions">
-                        <div class="event-image">
-                            <div class="image-placeholder" data-caption="Vietnamese contemporary art exhibition"></div>
-                            <div class="event-type-tag">Exhibition</div>
-                        </div>
-                        <div class="event-info">
-                            <div class="event-date">
-                                <span class="date-month">Mar</span>
-                                <span class="date-day">08</span>
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon instagram-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
                             </div>
-                            <div class="event-content">
-                                <h3 class="event-name">Voices of the Diaspora</h3>
-                                <p class="event-venue">Gallery MOMO, New York</p>
-                                <p class="event-excerpt">Contemporary Vietnamese artists explore themes of identity, migration, and cultural preservation through mixed media installations.</p>
-                                <div class="event-timing">
-                                    <span class="time">Opening Reception: 6:00 PM</span>
-                                    <span class="duration">Exhibition: Mar 8 - Apr 15</span>
-                                </div>
-                                <a href="#" class="event-link">View Details</a>
-                            </div>
+                            <h3 class="community-name">@life_is_street</h3>
+                            <span class="community-members">890K followers</span>
                         </div>
-                    </div>
+                        <p class="community-description">Curated street photography from around the globe. Known for quality selections and thoughtful captions about the craft.</p>
+                        <a href="https://www.instagram.com/life_is_street" class="community-link" target="_blank" rel="noopener noreferrer">Follow</a>
+                    </article>
 
-                    <div class="event-card observe" data-category="festivals">
-                        <div class="event-image">
-                            <div class="image-placeholder" data-caption="Tết festival celebration in Little Saigon"></div>
-                            <div class="event-type-tag">Festival</div>
-                        </div>
-                        <div class="event-info">
-                            <div class="event-date">
-                                <span class="date-month">Jan</span>
-                                <span class="date-day">29</span>
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon instagram-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
                             </div>
-                            <div class="event-content">
-                                <h3 class="event-name">Tết Festival 2025</h3>
-                                <p class="event-venue">Westminster, CA</p>
-                                <p class="event-excerpt">Join the largest Vietnamese New Year celebration in North America with traditional performances, food, and cultural activities for all ages.</p>
-                                <div class="event-timing">
-                                    <span class="time">10:00 AM - 10:00 PM</span>
-                                    <span class="duration">Family-friendly event</span>
-                                </div>
-                                <a href="#" class="event-link">View Details</a>
-                            </div>
+                            <h3 class="community-name">@burnmagazine</h3>
+                            <span class="community-members">425K followers</span>
                         </div>
-                    </div>
-
-                    <div class="event-card observe" data-category="talks">
-                        <div class="event-image">
-                            <div class="image-placeholder" data-caption="Panel discussion on Vietnamese literature"></div>
-                            <div class="event-type-tag">Panel</div>
-                        </div>
-                        <div class="event-info">
-                            <div class="event-date">
-                                <span class="date-month">Feb</span>
-                                <span class="date-day">22</span>
-                            </div>
-                            <div class="event-content">
-                                <h3 class="event-name">Literature & Memory</h3>
-                                <p class="event-venue">Virtual Event</p>
-                                <p class="event-excerpt">Distinguished Vietnamese-American authors discuss how literature preserves cultural memory and shapes identity across generations.</p>
-                                <div class="event-timing">
-                                    <span class="time">7:00 PM - 8:30 PM EST</span>
-                                    <span class="duration">Free registration</span>
-                                </div>
-                                <a href="#" class="event-link">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="event-card observe" data-category="workshops">
-                        <div class="event-image">
-                            <div class="image-placeholder" data-caption="Traditional Vietnamese cooking class"></div>
-                            <div class="event-type-tag">Workshop</div>
-                        </div>
-                        <div class="event-info">
-                            <div class="event-date">
-                                <span class="date-month">Mar</span>
-                                <span class="date-day">14</span>
-                            </div>
-                            <div class="event-content">
-                                <h3 class="event-name">Authentic Pho Workshop</h3>
-                                <p class="event-venue">Seattle, WA</p>
-                                <p class="event-excerpt">Master the art of traditional pho preparation with Chef Linh Pham, learning family recipes passed down through generations.</p>
-                                <div class="event-timing">
-                                    <span class="time">1:00 PM - 5:00 PM</span>
-                                    <span class="duration">$120 per person</span>
-                                </div>
-                                <a href="#" class="event-link">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="event-card observe" data-category="community">
-                        <div class="event-image">
-                            <div class="image-placeholder" data-caption="Vietnamese community gathering in Toronto"></div>
-                            <div class="event-type-tag">Community</div>
-                        </div>
-                        <div class="event-info">
-                            <div class="event-date">
-                                <span class="date-month">Apr</span>
-                                <span class="date-day">05</span>
-                            </div>
-                            <div class="event-content">
-                                <h3 class="event-name">Spring Community Gathering</h3>
-                                <p class="event-venue">Toronto, ON</p>
-                                <p class="event-excerpt">Monthly community meetup featuring cultural sharing, networking, and collaborative planning for upcoming cultural initiatives.</p>
-                                <div class="event-timing">
-                                    <span class="time">2:00 PM - 5:00 PM</span>
-                                    <span class="duration">Free attendance</span>
-                                </div>
-                                <a href="#" class="event-link">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="event-card observe" data-category="exhibitions">
-                        <div class="event-image">
-                            <div class="image-placeholder" data-caption="Historical Vietnamese photography exhibition"></div>
-                            <div class="event-type-tag">Exhibition</div>
-                        </div>
-                        <div class="event-info">
-                            <div class="event-date">
-                                <span class="date-month">Apr</span>
-                                <span class="date-day">18</span>
-                            </div>
-                            <div class="event-content">
-                                <h3 class="event-name">Saigon Through Time</h3>
-                                <p class="event-venue">Los Angeles, CA</p>
-                                <p class="event-excerpt">Rare historical photographs documenting the transformation of Saigon from the 1950s to present day, curated from private collections.</p>
-                                <div class="event-timing">
-                                    <span class="time">Opening: 7:00 PM</span>
-                                    <span class="duration">Apr 18 - Jun 30</span>
-                                </div>
-                                <a href="#" class="event-link">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
+                        <p class="community-description">Documentary and street photography magazine. Features emerging photographers and hosts discussions about photographic practice.</p>
+                        <a href="https://www.instagram.com/burnmagazine" class="community-link" target="_blank" rel="noopener noreferrer">Follow</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="events-cta">
+        <!-- Reddit Communities -->
+        <section class="communities-section" data-platform="reddit">
             <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Host Your Own Event</h2>
-                    <p class="cta-description">Partner with Vietnam Streets to organize cultural events in your community. We provide resources, promotion, and support for meaningful cultural programming.</p>
-                    <a href="collaborate.html" class="cta-button">Propose an Event</a>
+                <div class="section-header observe">
+                    <h2 class="section-title">Reddit Communities</h2>
+                    <p class="section-subtitle">Subreddits for discussions, critiques, and learning</p>
+                </div>
+
+                <div class="communities-grid">
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon reddit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                                </svg>
+                            </div>
+                            <h3 class="community-name">r/streetphotography</h3>
+                            <span class="community-members">387K members</span>
+                        </div>
+                        <p class="community-description">The main street photography subreddit. Share work, get feedback, discuss gear and technique. Active daily with quality discussions.</p>
+                        <a href="https://www.reddit.com/r/streetphotography" class="community-link" target="_blank" rel="noopener noreferrer">Visit Subreddit</a>
+                    </article>
+
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon reddit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                                </svg>
+                            </div>
+                            <h3 class="community-name">r/photocritique</h3>
+                            <span class="community-members">542K members</span>
+                        </div>
+                        <p class="community-description">Constructive criticism for all photography genres. Post your street work for detailed feedback on composition, exposure, and storytelling.</p>
+                        <a href="https://www.reddit.com/r/photocritique" class="community-link" target="_blank" rel="noopener noreferrer">Visit Subreddit</a>
+                    </article>
+
+                    <article class="community-card observe">
+                        <div class="community-header">
+                            <div class="community-icon reddit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                                </svg>
+                            </div>
+                            <h3 class="community-name">r/analog</h3>
+                            <span class="community-members">1.1M members</span>
+                        </div>
+                        <p class="community-description">Film photography community with strong street photography presence. Share film work, discuss cameras and developing techniques.</p>
+                        <a href="https://www.reddit.com/r/analog" class="community-link" target="_blank" rel="noopener noreferrer">Visit Subreddit</a>
+                    </article>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -290,19 +234,19 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Collaborate</h4>
+                <h4>Explore</h4>
                 <ul>
-                    <li><a href="collaborate.html">Submit Story</a></li>
-                    <li><a href="mailto:vietnamstreetscommunity@gmail.com?subject=Host Event Inquiry">Host Event</a></li>
-                    <li><a href="collaborate.html">Partnership</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="photographers.html">Photographers</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Support</h4>
+                <h4>Resources</h4>
                 <ul>
-                    <li><a href="collaborate.html">Donate</a></li>
-                    <li><a href="collaborate.html">Volunteer</a></li>
-                    <li><a href="mailto:vietnamstreetscommunity@gmail.com?subject=Sponsorship Inquiry">Sponsor</a></li>
+                    <li><a href="street-photography-bundle.html">Photography Guide</a></li>
+                    <li><a href="events.html">Communities</a></li>
+                    <li><a href="collaborate.html">Collaborate</a></li>
                 </ul>
             </div>
         </div>
@@ -312,7 +256,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/events.js"></script>
-    <script src="../js/event-registration.js"></script>
+    <script src="../js/communities.js"></script>
 </body>
 </html>
