@@ -157,23 +157,21 @@ class BundlePage {
         submitBtn.textContent = 'Sending...';
 
         try {
-            // TODO: Replace with your actual form submission endpoint
-            // Options: Mailchimp, ConvertKit, Formspree, Google Sheets, etc.
+            // Submit to Formspree
+            const response = await fetch('https://formspree.io/f/xjkpvkqg', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-            // Example using Formspree (you'll need to set up a form at formspree.io)
-            // const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-            //     method: 'POST',
-            //     body: formData,
-            //     headers: {
-            //         'Accept': 'application/json'
-            //     }
-            // });
-
-            // For now, simulate success
-            await this.simulateSubmission(email, instagram);
-
-            // Show success message
-            this.showSuccess();
+            if (response.ok) {
+                // Show success message
+                this.showSuccess();
+            } else {
+                throw new Error('Form submission failed');
+            }
 
         } catch (error) {
             console.error('Form submission error:', error);
@@ -183,23 +181,6 @@ class BundlePage {
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;
         }
-    }
-
-    /**
-     * Simulate form submission (replace with real endpoint)
-     */
-    simulateSubmission(email, instagram) {
-        return new Promise((resolve) => {
-            // Log the data (for now)
-            console.log('Preview request received:');
-            console.log('Email:', email);
-            console.log('Instagram:', instagram || '(not provided)');
-
-            // Simulate network delay
-            setTimeout(() => {
-                resolve();
-            }, 1000);
-        });
     }
 
     /**
