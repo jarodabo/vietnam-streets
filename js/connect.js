@@ -49,30 +49,32 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
-    // Load Instagram feed (placeholder)
+    // Load Instagram feed
     const instagramFeed = document.getElementById('instagram-feed-connect');
     if (instagramFeed) {
-        setTimeout(() => {
-            instagramFeed.innerHTML = `
-                <div class="instagram-item">
-                    <div class="image-placeholder" data-caption="Instagram post 1"></div>
-                </div>
-                <div class="instagram-item">
-                    <div class="image-placeholder" data-caption="Instagram post 2"></div>
-                </div>
-                <div class="instagram-item">
-                    <div class="image-placeholder" data-caption="Instagram post 3"></div>
-                </div>
-                <div class="instagram-item">
-                    <div class="image-placeholder" data-caption="Instagram post 4"></div>
-                </div>
-                <div class="instagram-item">
-                    <div class="image-placeholder" data-caption="Instagram post 5"></div>
-                </div>
-                <div class="instagram-item">
-                    <div class="image-placeholder" data-caption="Instagram post 6"></div>
-                </div>
-            `;
-        }, 500);
+        // Instagram Widget Configuration (using SnapWidget)
+        const WIDGET_ID = '1109907';
+
+        // Create SnapWidget iframe
+        const widgetHTML = `
+            <iframe
+                src="https://snapwidget.com/embed/${WIDGET_ID}"
+                class="snapwidget-widget"
+                allowtransparency="true"
+                frameborder="0"
+                scrolling="no"
+                style="border:none; overflow:hidden; width:100%; min-height:400px;">
+            </iframe>
+        `;
+
+        instagramFeed.innerHTML = widgetHTML;
+
+        // Load SnapWidget script if not already loaded
+        if (!document.querySelector('script[src*="snapwidget.com"]')) {
+            const script = document.createElement('script');
+            script.src = 'https://snapwidget.com/js/snapwidget.js';
+            script.async = true;
+            document.body.appendChild(script);
+        }
     }
 });
