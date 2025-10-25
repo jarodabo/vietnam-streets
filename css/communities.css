@@ -6,7 +6,7 @@
 
 .platform-filter {
     padding: var(--space-xl) 0;
-    background: var(--color-bg-alt);
+    background: linear-gradient(to bottom, var(--color-bg-alt), var(--color-bg));
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -18,26 +18,53 @@
 }
 
 .filter-btn {
-    padding: 0.75rem 1.5rem;
+    padding: 0.875rem 1.75rem;
     font-family: 'Inter', Arial, sans-serif;
     font-size: 0.9375rem;
     font-weight: var(--font-weight-medium);
     color: var(--color-text);
     background: white;
-    border: 1px solid var(--color-border);
+    border: 1.5px solid var(--color-border);
+    border-radius: 2px;
     cursor: pointer;
-    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.filter-btn > * {
+    position: relative;
+    z-index: 1;
 }
 
 .filter-btn:hover {
     border-color: var(--color-primary);
     color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .filter-btn.active {
     background: var(--color-primary);
     color: white;
     border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.filter-btn.active::before {
+    left: 0;
 }
 
 /* =====================================================
@@ -46,11 +73,12 @@
 
 .communities-section {
     padding: var(--space-3xl) 0;
-    background: var(--color-bg);
+    background: linear-gradient(to bottom, var(--color-bg), var(--color-bg-alt));
+    position: relative;
 }
 
 .communities-section:nth-child(even) {
-    background: var(--color-bg-alt);
+    background: linear-gradient(to bottom, var(--color-bg-alt), var(--color-bg));
 }
 
 .communities-section.hidden {
@@ -60,6 +88,22 @@
 .section-header {
     text-align: center;
     margin-bottom: var(--space-3xl);
+}
+
+.section-header h2 {
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    font-weight: var(--font-weight-normal);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .communities-grid {
@@ -76,30 +120,78 @@
     padding: var(--space-2xl);
     background: white;
     border: 1px solid var(--color-border);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .communities-section:nth-child(even) .community-card {
     background: var(--color-bg);
 }
 
+/* Platform-specific accent borders */
+.communities-section[data-platform="facebook"] .community-card {
+    border-left: 4px solid #1877F2;
+}
+
+.communities-section[data-platform="instagram"] .community-card {
+    border-left: 4px solid #DD2A7B;
+}
+
+.communities-section[data-platform="reddit"] .community-card {
+    border-left: 4px solid #FF4500;
+}
+
+.community-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02), transparent);
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
 .community-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08),
+                0 4px 8px rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.community-card:hover::before {
+    height: 100%;
+}
+
+.community-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .community-header {
     margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .community-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     margin-bottom: var(--space-md);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.community-card:hover .community-icon {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .facebook-icon {
@@ -124,13 +216,22 @@
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
     color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+.community-card:hover .community-name {
+    color: var(--color-text);
 }
 
 .community-members {
-    display: block;
+    display: inline-block;
     font-size: 0.875rem;
     color: var(--color-text-muted);
     font-weight: var(--font-weight-medium);
+    padding: 0.25rem 0.75rem;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    letter-spacing: 0.02em;
 }
 
 .community-description {
@@ -138,23 +239,78 @@
     line-height: 1.7;
     color: var(--color-text-light);
     margin-bottom: var(--space-lg);
+    margin-top: var(--space-md);
 }
 
 .community-link {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.875rem 1.75rem;
     font-family: 'Inter', Arial, sans-serif;
     font-size: 0.9375rem;
     font-weight: var(--font-weight-medium);
     color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    background: white;
+    border: 1.5px solid var(--color-primary);
+    border-radius: 2px;
     text-decoration: none;
-    transition: all var(--transition-base);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.community-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.community-link:hover::before {
+    left: 0;
 }
 
 .community-link:hover {
-    background: var(--color-primary);
     color: white;
+    border-color: var(--color-primary);
+    transform: translateX(4px);
+}
+
+.community-link span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Platform-specific link colors */
+.communities-section[data-platform="facebook"] .community-link {
+    color: #1877F2;
+    border-color: #1877F2;
+}
+
+.communities-section[data-platform="facebook"] .community-link::before {
+    background: #1877F2;
+}
+
+.communities-section[data-platform="instagram"] .community-link {
+    color: #DD2A7B;
+    border-color: #DD2A7B;
+}
+
+.communities-section[data-platform="instagram"] .community-link::before {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+}
+
+.communities-section[data-platform="reddit"] .community-link {
+    color: #FF4500;
+    border-color: #FF4500;
+}
+
+.communities-section[data-platform="reddit"] .community-link::before {
+    background: #FF4500;
 }
 
 /* =====================================================
