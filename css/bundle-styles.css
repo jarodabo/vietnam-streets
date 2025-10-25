@@ -549,13 +549,217 @@
 }
 
 /* =====================================================
+   PREVIEW MODAL & FORM
+   ===================================================== */
+
+.preview-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.preview-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: var(--color-bg);
+    padding: var(--space-3xl);
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    width: 2.5rem;
+    height: 2.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--color-primary);
+}
+
+.modal-header {
+    margin-bottom: var(--space-2xl);
+}
+
+.modal-header h3 {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-normal);
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+}
+
+.modal-header p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+}
+
+.preview-form {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.form-group .required {
+    color: var(--color-text-muted);
+}
+
+.form-group .optional {
+    font-weight: var(--font-weight-normal);
+    color: var(--color-text-muted);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.form-group input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.form-actions {
+    margin-bottom: var(--space-md);
+}
+
+.form-submit {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-bg);
+    background: var(--color-primary);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.form-submit:hover {
+    background: var(--color-secondary);
+}
+
+.form-submit:disabled {
+    background: var(--color-text-muted);
+    cursor: not-allowed;
+}
+
+.form-note {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Success State */
+.form-success {
+    text-align: center;
+}
+
+.success-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #22c55e;
+    border: 2px solid #22c55e;
+    border-radius: 50%;
+}
+
+.form-success h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-normal);
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+}
+
+.form-success p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+}
+
+.success-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+/* Button styling for preview triggers */
+.preview-trigger {
+    background: none;
+    cursor: pointer;
+}
+
+/* =====================================================
    PRINT STYLES
    ===================================================== */
 
 @media print {
     .header,
     .footer,
-    .bundle-access {
+    .bundle-access,
+    .preview-modal {
         display: none;
     }
 
@@ -566,5 +770,16 @@
     body {
         font-size: 12pt;
         line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .modal-close {
+        top: var(--space-md);
+        right: var(--space-md);
     }
 }
